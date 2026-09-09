@@ -62,7 +62,7 @@ targets:
         buildPhase: resources
       - path: SALES.en.md
         buildPhase: resources
-      - path: Docs/Security-Model.md
+      - path: Security-Model.md
         buildPhase: resources
       - path: ChromeExtension
         type: folder
