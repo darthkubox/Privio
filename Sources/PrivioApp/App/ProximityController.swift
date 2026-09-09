@@ -117,7 +117,6 @@ final class ProximityController {
     private func reconcileMonitor() {
         guard !isSnapshot else { return }
         let shouldRun = config.enabled || sectionVisible
-        ProximityDiag.log("reconcile: shouldRun=\(shouldRun) running=\(monitorRunning) enabled=\(config.enabled) sectionVisible=\(sectionVisible) btDenied=\(bluetoothDenied)")
         if shouldRun, !monitorRunning {
             monitorRunning = true
             monitor.start()
@@ -194,12 +193,10 @@ final class ProximityController {
         let readSummary = readings.map { r in
             "\(r.deviceID.suffix(6)) conn=\(r.isConnected) rssi=\(r.rssi.map(String.init) ?? "nil")"
         }.joined(separator: " | ")
-        ProximityDiag.log("policy: thr=\(config.rssiThreshold) armed=\(policy.isArmed) autoPaused=\(policy.isAutoPaused) decision=\(decision) readings=[\(readSummary)]")
         switch decision {
         case .none:
             break
         case .lock(let target):
-            ProximityDiag.log("policy: LOCK target=\(target)")
             switch target {
             case .screen:
                 screenLock.lockScreen()
@@ -208,7 +205,6 @@ final class ProximityController {
                 onLockVault?()
             }
         case .autoPaused:
-            ProximityDiag.log("policy: AUTO-PAUSED (circuit breaker)")
             autoPausedNotice = true
             onPersistPaused?(true)
         }

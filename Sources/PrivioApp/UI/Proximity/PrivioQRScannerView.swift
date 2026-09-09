@@ -48,7 +48,6 @@ struct PrivioQRScannerView: NSViewRepresentable {
         func attach(to view: CameraPreviewView) {
             Task { @MainActor in
                 let status = AVCaptureDevice.authorizationStatus(for: .video)
-                ProximityDiag.log("camera: authStatus=\(status.rawValue) (0=notDet 1=restricted 2=denied 3=authorized)")
                 onStatus(String(localized: "Checking camera access…"))
                 let allowed: Bool
                 switch status {
@@ -60,15 +59,12 @@ struct PrivioQRScannerView: NSViewRepresentable {
                     let previousPolicy = NSApp.activationPolicy()
                     NSApp.setActivationPolicy(.regular)
                     NSApp.activate(ignoringOtherApps: true)
-                    ProximityDiag.log("camera: requestAccess… (policy \(previousPolicy.rawValue)->regular)")
                     onStatus(String(localized: "Waiting for your permission…"))
                     allowed = await AVCaptureDevice.requestAccess(for: .video)
-                    ProximityDiag.log("camera: requestAccess -> \(allowed)")
                     if previousPolicy != .regular { NSApp.setActivationPolicy(previousPolicy) }
                 default: allowed = false
                 }
                 guard allowed else {
-                    ProximityDiag.log("camera: not allowed -> CTA")
                     onStatus(String(localized: "Camera access is off."))
                     onCameraDenied()
                     return
@@ -86,10 +82,8 @@ struct PrivioQRScannerView: NSViewRepresentable {
                 let devices = AVCaptureDevice.DiscoverySession(
                     deviceTypes: [.builtInWideAngleCamera, .external, .continuityCamera],
                     mediaType: .video, position: .unspecified).devices
-                ProximityDiag.log("camera: devices=[\(devices.map { $0.localizedName }.joined(separator: ", "))]")
                 guard let camera = AVCaptureDevice.default(for: .video) ?? devices.first,
                       let input = try? AVCaptureDeviceInput(device: camera) else {
-                    ProximityDiag.log("camera: no device/input")
                     self.fail(String(localized: "No camera is available on this Mac."))
                     return
                 }
@@ -100,7 +94,6 @@ struct PrivioQRScannerView: NSViewRepresentable {
                 let output = AVCaptureVideoDataOutput()
                 output.alwaysDiscardsLateVideoFrames = true
                 guard session.canAddInput(input), session.canAddOutput(output) else {
-                    ProximityDiag.log("camera: cannot add input/output")
                     self.fail(String(localized: "The camera could not be started."))
                     return
                 }
@@ -114,9 +107,7 @@ struct PrivioQRScannerView: NSViewRepresentable {
                     view?.previewLayer.session = session
                     self.onStatus(String(localized: "Point the camera at the QR code."))
                 }
-                ProximityDiag.log("camera: starting session with \(camera.localizedName)")
                 session.startRunning()
-                ProximityDiag.log("camera: session running=\(session.isRunning)")
             }
         }
 
@@ -144,7 +135,6 @@ struct PrivioQRScannerView: NSViewRepresentable {
                 delivered = true
                 DispatchQueue.main.async { [onCode] in onCode(value) }
             } catch {
-                ProximityDiag.log("camera: Vision QR error=\(error.localizedDescription)")
             }
         }
 

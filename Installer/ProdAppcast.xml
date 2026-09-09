@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Privio Updates</title>
+    <link>https://priviolock.com</link>
+    <description>Signed Privio release updates.</description>
+    <language>en</language>
+    <item>
+      <title>Privio __VERSION__</title>
+      <description>Privio __VERSION__.</description>
+      <pubDate>__PUB_DATE__</pubDate>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <enclosure
+        url="__ENCLOSURE_URL__"
+        sparkle:version="__BUILD__"
+        sparkle:shortVersionString="__VERSION__"
+        sparkle:installationType="package"
+        sparkle:edSignature="__SIGNATURE__"
+        length="__LENGTH__"
+        type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

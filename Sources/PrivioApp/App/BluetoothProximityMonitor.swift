@@ -92,7 +92,6 @@ final class BluetoothProximityMonitor: ProximityMonitoring, @unchecked Sendable 
         let batteries = batteryByAddress()
         let raw = IOBluetoothDevice.pairedDevices()
         let paired = (raw as? [IOBluetoothDevice]) ?? []
-        ProximityDiag.log("classic: raw=\(raw == nil ? "nil" : "count=\(raw?.count ?? -1)") parsed=\(paired.count) names=[\(paired.compactMap { $0.name ?? $0.addressString }.joined(separator: ", "))] batteries=\(batteries.count)")
         return paired.compactMap { device in
             guard let address = device.addressString, !address.isEmpty else { return nil }
             let connected = device.isConnected()

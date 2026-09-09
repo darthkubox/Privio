@@ -108,7 +108,6 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
                 self.sendMacStatusToConnectedWatches()
             }
             self.logLeftWindow(current: devices)
-            ProximityDiag.log("BLE emit: seen=\(self.seen.count) shown=\(devices.count) sample=[\(devices.prefix(6).map { "\($0.name)(\($0.rssi ?? 0))" }.joined(separator: ", "))]")
             self.onUpdate?(devices)
         }
         emitTimer = t
@@ -134,7 +133,6 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
         guard now.timeIntervalSince(lastAdvertAt) > 8,
               now.timeIntervalSince(lastScanRestart) > 10 else { return }
         lastScanRestart = now
-        ProximityDiag.log("BLE watchdog: restart skanu (brak advertów \(String(format: "%.1f", now.timeIntervalSince(lastAdvertAt))) s)")
         central?.stopScan()
         beginScan()
     }
@@ -157,9 +155,7 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
             let key = String(id.dropFirst("ble:".count))
             if let v = seen[key] {
                 let age = Date().timeIntervalSince(v.at)
-                ProximityDiag.log("BLE left-window: \(v.label) id=\(id) lastRSSI=\(v.rssi) age=\(String(format: "%.1f", age)) s")
             } else {
-                ProximityDiag.log("BLE left-window: id=\(id) (brak wpisu seen)")
             }
         }
         lastShownIDs = shown
@@ -218,7 +214,6 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
         // wąsko w przyszłość - eliminuje fałszywe „odejścia" przy dryfie zegarów.
         guard ProximityBeaconSlot.isSlotAcceptable(advertisedSlot: advertisedSlot,
                                                    currentSlot: currentSlot) else {
-            ProximityDiag.log("BLE PV02: advSlot=\(advertisedSlot) curSlot=\(currentSlot) delta=\(slotDelta) OUT-OF-WINDOW pairings=\(pairings.count)")
             return nil
         }
         let message = Data([0x50, 0x56, 0x02]) + counterBytes
@@ -228,7 +223,6 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
             let expected = Data(HMAC<SHA256>.authenticationCode(for: message, using: key).prefix(4))
             if advertisedTag == expected { return pairing.id }
         }
-        ProximityDiag.log("BLE PV02: HMAC-FAIL advTag=\(advertisedTag.map { String(format: "%02x", $0) }.joined()) slot=\(advertisedSlot) pairings=\(pairings.count) ids=[\(pairings.map { $0.id.suffix(4) }.joined(separator: ","))]")
         return nil
     }
 
@@ -245,7 +239,6 @@ final class BLEProximityScanner: NSObject, @unchecked Sendable {
 
 extension BLEProximityScanner: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ c: CBCentralManager) {
-        ProximityDiag.log("BLE state=\(c.state.rawValue) (5=on,4=off,3=unauthorized,1=resetting,0=unknown) wantScan=\(wantScan)")
         onState?(BluetoothRadioState(c.state))
         if c.state == .poweredOn { beginScan() }
         onUpdate?(currentDevices())
@@ -264,7 +257,6 @@ extension BLEProximityScanner: CBCentralManagerDelegate {
             seen[key] = (label, .watch, rssi, Date())
             if Date().timeIntervalSince(lastSeenLog[key] ?? .distantPast) > 10 {
                 lastSeenLog[key] = Date()
-                ProximityDiag.log("BLE seen: \(label) rssi=\(rssi)")
             }
             if connectedBeacons[p.identifier] == nil,
                let pairing = PrivioBeaconPairingStore.shared.pairing(for: deviceID) {
@@ -287,7 +279,6 @@ extension BLEProximityScanner: CBCentralManagerDelegate {
                let data = advertisementData[CBAdvertisementDataManufacturerDataKey] as? Data {
                 lastManufacturerLog[p.identifier] = Date()
                 let payload = data.map { String(format: "%02x", $0) }.joined()
-                ProximityDiag.log("BLE Samsung id=\(p.identifier.uuidString) rssi=\(rssi) manufacturer=\(payload)")
             }
         }
     }

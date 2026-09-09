@@ -153,14 +153,12 @@ final class PrivioBeaconPairingStore: @unchecked Sendable {
                    let data = row[kSecValueData as String] as? Data { loaded[id] = data }
             }
         } else if status != errSecItemNotFound {
-            ProximityDiag.log("beacon store keychain reload status=\(status)")
         }
         // Plik jest trwałym źródłem (przeżywa aktualizacje). Uzupełnia to, czego
         // Keychain nie oddał, a gdy Keychain miał wpis brakujący w pliku - dosyp go
         // do pliku, żeby utrwalić parowania sprzed tej zmiany.
         let fromFile = Self.loadFile()
         for (id, secret) in fromFile where loaded[id] == nil { loaded[id] = secret }
-        ProximityDiag.log("beacon store reload: keychain=\(status) file=\(fromFile.count) total=\(loaded.count)")
         lock.withLock { cache = loaded }
         if loaded.count > fromFile.count { persistFile() }   // utrwal wpisy tylko-z-Keychain
     }

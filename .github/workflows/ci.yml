@@ -1,0 +1,57 @@
+name: CI
+
+# Build the app and run the PrivioCore unit tests on every push/PR to main.
+# No code signing and no secrets: CI only verifies that the source compiles and
+# the domain logic passes its tests. Release signing/notarization happens locally
+# (see Docs/RELEASE.md), never here.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# A newer push to the same ref cancels the older in-flight run.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # GitHub runners ship several Xcodes; pick the newest stable one so the
+      # build uses the most recent available SDK.
+      - name: Select Xcode
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest-stable
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      # The Xcode project is generated from project.yml and is not committed.
+      - name: Generate Xcode project
+        run: xcodegen generate
+
+      - name: Build (ad-hoc, no signing)
+        run: |
+          xcodebuild \
+            -project Privio.xcodeproj \
+            -scheme Privio \
+            -configuration Debug \
+            -destination 'platform=macOS' \
+            build \
+            CODE_SIGNING_ALLOWED=NO
+
+      - name: Test PrivioCore
+        run: |
+          xcodebuild \
+            -project Privio.xcodeproj \
+            -scheme PrivioCoreTests \
+            -destination 'platform=macOS' \
+            test \
+            CODE_SIGNING_ALLOWED=NO
