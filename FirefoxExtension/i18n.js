@@ -1,0 +1,211 @@
+// Wspólna warstwa tłumaczeń dla popupu, ustawień, strony odblokowania i service
+// workera. Nie używamy natywnego chrome.i18n/_locales, bo chcemy pozwolić
+// użytkownikowi wybrać język niezależnie od języka przeglądarki oraz domyślnie
+// podążać za językiem aplikacji Privio (pole `appLanguage` z /privio/config).
+const PrivioI18n = {
+  dict: {
+    pl: {
+      brand_subtitle: "Ochrona stron",
+      conn_connecting: "Łączenie…",
+      conn_connected: "Połączono",
+      conn_offline: "Brak połączenia",
+      hero_checking_title: "Sprawdzanie ochrony…",
+      hero_checking_desc: "Łączenie z aplikacją Privio na tym Macu.",
+      hero_active_title: "Ochrona działa",
+      hero_active_desc: "Privio jest połączone i chroni skonfigurowane strony.",
+      hero_disabled_title: "Ochrona jest wyłączona",
+      hero_disabled_desc: "Połączenie działa, ale ochrona stron jest wyłączona w Privio.",
+      hero_offline_title: "Aplikacja Privio jest niedostępna",
+      hero_offline_desc: "Uruchom Privio na Macu, aby przywrócić ochronę stron.",
+      stat_protected: "chronione",
+      stat_blocked: "zablokowane",
+      current_site: "Bieżąca strona",
+      current_none: "Brak strony WWW",
+      state_blocked: "Zablokowana",
+      state_protected: "Chroniona",
+      state_unprotected: "Niechroniona",
+      btn_open_privio: "Otwórz ustawienia w Privio",
+      btn_settings: "Ustawienia",
+      btn_refresh: "Odśwież status",
+      toast_opening: "Otwieram Privio na Macu…",
+      toast_open_failed: "Nie udało się połączyć z Privio.",
+      btn_protect_site: "Chroń tę stronę",
+      btn_lock_now: "Zablokuj teraz",
+      btn_unprotect_site: "Przestań chronić tę stronę",
+      toast_protected: "Dodano do ochrony.",
+      toast_locked: "Strona zablokowana.",
+      toast_unprotect_requested: "Potwierdź usunięcie ochrony w Privio (Touch ID lub hasło).",
+      toast_action_failed: "Nie udało się. Sprawdź połączenie z Privio.",
+      pause_label: "Wstrzymaj ochronę na",
+      pause_15: "15 min",
+      pause_60: "1 godz.",
+      pause_off: "Wyłącz",
+      paused_prefix: "Wstrzymano do",
+      paused_manual: "Wyłączona do ręcznego wznowienia",
+      btn_resume: "Wznów",
+      hero_paused_title: "Ochrona wstrzymana",
+      hero_paused_desc: "Wznów, aby znów chronić skonfigurowane strony.",
+      toast_pause_requested: "Potwierdź wstrzymanie w Privio (Touch ID).",
+      toast_disable_requested: "Potwierdź wyłączenie w Privio (Touch ID lub hasło).",
+      toast_resumed: "Ochrona wznowiona.",
+      footer_ext: "Rozszerzenie Privio",
+      options_title: "Ustawienia rozszerzenia Privio",
+      options_subtitle: "Język, status połączenia i skróty do aplikacji.",
+      lang_label: "Język rozszerzenia",
+      lang_auto: "Automatycznie (jak Privio)",
+      lang_pl: "Polski",
+      lang_en: "English",
+      lang_hint: "„Automatycznie” podąża za językiem aplikacji Privio, a gdy jest niedostępna - za językiem przeglądarki.",
+      saved: "Zapisano",
+      section_status: "Połączenie i ochrona",
+      section_domains: "Chronione domeny",
+      section_about: "O rozszerzeniu",
+      status_app: "Aplikacja Privio",
+      status_protection: "Ochrona stron",
+      on: "Włączona",
+      off: "Wyłączona",
+      protected_list: "Chronione",
+      blocked_list: "Zablokowane teraz",
+      domains_empty: "Brak skonfigurowanych domen. Dodaj je w aplikacji Privio.",
+      app_version: "Wersja aplikacji",
+      ext_version: "Wersja rozszerzenia",
+      last_sync: "Ostatnia synchronizacja",
+      never: "nigdy",
+      just_now: "przed chwilą",
+      seconds_ago: "s temu",
+      open_privio_full: "Otwórz Privio na Macu",
+      refresh: "Odśwież",
+      unlock_title: "Strona chroniona przez Privio",
+      unlock_prep: "Przygotowywanie odblokowania…",
+      unlock_hint: "Po chwili pojawi się Touch ID.",
+      unlock_confirm: "Potwierdź dostęp za pomocą Touch ID.",
+      unlock_success: "Odblokowano. Otwieranie strony…",
+      unlock_cancelled: "Odblokowanie anulowano albo nie powiodło się.",
+      unlock_offline: "Privio nie działa albo lokalne API jest niedostępne.",
+      unlock_no_target: "Nie udało się odczytać adresu strony. Wróć i spróbuj ponownie.",
+      retry: "Spróbuj ponownie",
+      back: "Wróć",
+      badge_on: "Privio - ochrona działa",
+      badge_off: "Privio - ochrona wyłączona",
+      badge_offline: "Privio - brak połączenia z aplikacją"
+    },
+    en: {
+      brand_subtitle: "Website Protection",
+      conn_connecting: "Connecting…",
+      conn_connected: "Connected",
+      conn_offline: "Disconnected",
+      hero_checking_title: "Checking protection…",
+      hero_checking_desc: "Connecting to Privio on this Mac.",
+      hero_active_title: "Protection is on",
+      hero_active_desc: "Privio is connected and protecting your sites.",
+      hero_disabled_title: "Protection is off",
+      hero_disabled_desc: "Connected, but Website Protection is turned off in Privio.",
+      hero_offline_title: "Privio app is unavailable",
+      hero_offline_desc: "Open Privio on your Mac to restore Website Protection.",
+      stat_protected: "protected",
+      stat_blocked: "blocked",
+      current_site: "Current site",
+      current_none: "No website",
+      state_blocked: "Blocked",
+      state_protected: "Protected",
+      state_unprotected: "Unprotected",
+      btn_open_privio: "Open settings in Privio",
+      btn_settings: "Settings",
+      btn_refresh: "Refresh status",
+      toast_opening: "Opening Privio on your Mac…",
+      toast_open_failed: "Couldn't reach Privio.",
+      btn_protect_site: "Protect this site",
+      btn_lock_now: "Lock now",
+      btn_unprotect_site: "Stop protecting this site",
+      toast_protected: "Added to protection.",
+      toast_locked: "Site locked.",
+      toast_unprotect_requested: "Confirm removal in Privio with Touch ID or password.",
+      toast_action_failed: "Failed. Check the connection to Privio.",
+      pause_label: "Pause protection for",
+      pause_15: "15 min",
+      pause_60: "1 h",
+      pause_off: "Turn off",
+      paused_prefix: "Paused until",
+      paused_manual: "Off until manually resumed",
+      btn_resume: "Resume",
+      hero_paused_title: "Protection paused",
+      hero_paused_desc: "Resume to protect your configured sites again.",
+      toast_pause_requested: "Confirm the pause in Privio (Touch ID).",
+      toast_disable_requested: "Confirm in Privio with Touch ID or password.",
+      toast_resumed: "Protection resumed.",
+      footer_ext: "Privio extension",
+      options_title: "Privio extension settings",
+      options_subtitle: "Language, connection status and shortcuts to the app.",
+      lang_label: "Extension language",
+      lang_auto: "Automatic (match Privio)",
+      lang_pl: "Polski",
+      lang_en: "English",
+      lang_hint: "\"Automatic\" follows the Privio app language, falling back to your browser language when the app is unavailable.",
+      saved: "Saved",
+      section_status: "Connection & protection",
+      section_domains: "Protected domains",
+      section_about: "About",
+      status_app: "Privio app",
+      status_protection: "Website Protection",
+      on: "On",
+      off: "Off",
+      protected_list: "Protected",
+      blocked_list: "Blocked now",
+      domains_empty: "No configured domains. Add them in the Privio app.",
+      app_version: "App version",
+      ext_version: "Extension version",
+      last_sync: "Last sync",
+      never: "never",
+      just_now: "just now",
+      seconds_ago: "s ago",
+      open_privio_full: "Open Privio on your Mac",
+      refresh: "Refresh",
+      unlock_title: "This site is protected by Privio",
+      unlock_prep: "Preparing to unlock…",
+      unlock_hint: "Touch ID will appear in a moment.",
+      unlock_confirm: "Confirm access with Touch ID.",
+      unlock_success: "Unlocked. Opening the site…",
+      unlock_cancelled: "Unlock was cancelled or failed.",
+      unlock_offline: "Privio isn't running or the local service is unavailable.",
+      unlock_no_target: "Couldn't read the site address. Go back and try again.",
+      retry: "Try again",
+      back: "Back",
+      badge_on: "Privio - protection is on",
+      badge_off: "Privio - protection is off",
+      badge_offline: "Privio - no connection to the app"
+    }
+  },
+
+  normalize(code) {
+    return String(code || "").toLowerCase().startsWith("pl") ? "pl" : "en";
+  },
+
+  // pref ∈ {auto, pl, en}; appLang to opcjonalny kod z /privio/config.
+  resolve(pref, appLang) {
+    if (pref === "pl" || pref === "en") return pref;
+    if (appLang) return this.normalize(appLang);
+    try { return this.normalize(chrome.i18n.getUILanguage()); } catch (_) { return "en"; }
+  },
+
+  t(lang, key) {
+    const d = this.dict[lang] || this.dict.en;
+    return d[key] ?? this.dict.en[key] ?? key;
+  },
+
+  // Uzupełnia elementy oznaczone data-i18n / data-i18n-title tekstem w danym języku.
+  apply(root, lang) {
+    root.querySelectorAll("[data-i18n]").forEach(el => {
+      el.textContent = this.t(lang, el.getAttribute("data-i18n"));
+    });
+    root.querySelectorAll("[data-i18n-title]").forEach(el => {
+      el.title = this.t(lang, el.getAttribute("data-i18n-title"));
+    });
+  },
+
+  async storedPref() {
+    try { const o = await chrome.storage.local.get("privioLang"); return o.privioLang || "auto"; }
+    catch (_) { return "auto"; }
+  }
+};
+
+if (typeof globalThis !== "undefined") globalThis.PrivioI18n = PrivioI18n;

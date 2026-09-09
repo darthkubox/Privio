@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privio</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icons/icon48.png" alt="" width="42" height="42">
+      <div class="brand"><strong>Privio</strong><span data-i18n="brand_subtitle">Website Protection</span></div>
+      <div id="connection" class="pill waiting"><i></i><span data-i18n="conn_connecting">Łączenie…</span></div>
+    </header>
+
+    <section id="hero" class="hero waiting">
+      <div class="shield">✓</div>
+      <div><h1 id="title" data-i18n="hero_checking_title">Sprawdzanie ochrony…</h1><p id="description" data-i18n="hero_checking_desc">Łączenie z aplikacją Privio na tym Macu.</p></div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="protectedCount">-</strong><span data-i18n="stat_protected">chronione</span></div>
+      <div><strong id="blockedCount">-</strong><span data-i18n="stat_blocked">zablokowane</span></div>
+    </section>
+
+    <section class="current">
+      <span data-i18n="current_site">Bieżąca strona</span>
+      <strong id="currentSite">-</strong>
+      <div id="currentState" class="mini neutral" data-i18n="state_unprotected">Niechroniona</div>
+    </section>
+
+    <button id="siteAction" class="primary" hidden></button>
+    <button id="unprotectSite" class="danger wide" data-i18n="btn_unprotect_site" hidden>Przestań chronić tę stronę</button>
+
+    <section id="pauseControls" class="pause" hidden>
+      <span data-i18n="pause_label">Wstrzymaj ochronę na</span>
+      <div class="pausebtns">
+        <button data-min="15" data-i18n="pause_15">15 min</button>
+        <button data-min="60" data-i18n="pause_60">1 godz.</button>
+        <button data-min="0" data-i18n="pause_off">Wyłącz</button>
+      </div>
+    </section>
+    <div id="pausedBanner" class="paused" hidden>
+      <span id="pausedText"></span>
+      <button id="resume" data-i18n="btn_resume">Wznów</button>
+    </div>
+
+    <button id="openPrivio" class="ghost wide" data-i18n="btn_open_privio">Otwórz ustawienia w Privio</button>
+    <div class="row">
+      <button id="settings" class="ghost" data-i18n="btn_settings">Ustawienia</button>
+      <button id="refresh" class="ghost" data-i18n="btn_refresh">Odśwież status</button>
+    </div>
+
+    <div id="toast" class="toast" hidden></div>
+    <footer><span data-i18n="footer_ext">Rozszerzenie Privio</span><span id="version"></span></footer>
+  </main>
+  <script src="compat.js"></script>
+  <script src="i18n.js"></script>
+  <script src="env.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

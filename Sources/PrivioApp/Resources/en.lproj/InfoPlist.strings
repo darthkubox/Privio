@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "Privio uses the camera locally to scan a watch pairing QR code or, when enabled, capture a failed unlock attempt.";
+"NSBluetoothAlwaysUsageDescription" = "Privio uses Bluetooth to see whether a trusted paired device (like your phone or watch) is near, so it can lock your Mac when you walk away. It never unlocks your Mac and sends nothing off this device.";

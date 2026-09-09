@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!--
+	  Privio celowo NIE jest sandboxowana (dystrybucja poza Mac App Store).
+	  Sandbox uniemożliwiłby niezawodne sterowanie innymi aplikacjami
+	  (ukrywanie/zamykanie) oraz zarządzanie agentem logowania.
+
+	  Faza 1 nie wymaga dodatkowych entitlementów. W Fazie 5 (Secure Enclave)
+	  dodamy tu ewentualne keychain-access-groups, jeśli okażą się potrzebne
+	  dla aplikacji niesandboxowanej (domyślnie klucze SE działają bez nich).
+	-->
+	<!-- QR pairing and the optional failed-attempt camera both use AVFoundation. -->
+	<key>com.apple.security.device.camera</key>
+	<true/>
+</dict>
+</plist>

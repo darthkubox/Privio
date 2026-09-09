@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <!--
+      Local self-signed certificates do not carry an Apple Team ID. With Hardened
+      Runtime, dyld would therefore reject PrivioCore/Sparkle as having a different
+      team from the host app. This exception is ONLY for local test installers.
+      Developer ID builds use Sources/PrivioApp/Resources/Privio.entitlements and
+      must retain normal library validation.
+    -->
+    <key>com.apple.security.cs.disable-library-validation</key>
+    <true/>
+    <!-- Required by Hardened Runtime for AVFoundation QR scanning. Without it,
+         macOS never registers Privio in Privacy & Security → Camera. -->
+    <key>com.apple.security.device.camera</key>
+    <true/>
+</dict>
+</plist>

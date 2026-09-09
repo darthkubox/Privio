@@ -1,0 +1,2 @@
+"NSCameraUsageDescription" = "Privio używa kamery lokalnie do zeskanowania kodu QR zegarka lub, po włączeniu, zdjęcia po nieudanej próbie odblokowania.";
+"NSBluetoothAlwaysUsageDescription" = "Privio używa Bluetooth, aby sprawdzać, czy zaufane sparowane urządzenie (np. telefon lub zegarek) jest w pobliżu, i zablokować Maca, gdy się oddalisz. Nigdy nie odblokowuje Maca i niczego nie wysyła poza to urządzenie.";

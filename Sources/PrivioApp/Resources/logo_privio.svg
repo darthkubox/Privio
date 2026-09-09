@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Warstwa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 312 400">
+  <!-- Generator: Adobe Illustrator 30.7.0, SVG Export Plug-In . SVG Version: 2.1.4 Build 114)  -->
+  <defs>
+    <style>
+      .st0 {
+        stroke: url(#Gradient_bez_nazwy3);
+      }
+
+      .st0, .st1, .st2, .st3, .st4, .st5, .st6, .st7 {
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 12px;
+      }
+
+      .st1 {
+        stroke: url(#Gradient_bez_nazwy7);
+      }
+
+      .st2 {
+        stroke: url(#Gradient_bez_nazwy1);
+      }
+
+      .st3 {
+        stroke: url(#Gradient_bez_nazwy4);
+      }
+
+      .st4 {
+        stroke: url(#Gradient_bez_nazwy5);
+      }
+
+      .st5 {
+        stroke: url(#Gradient_bez_nazwy2);
+      }
+
+      .st6 {
+        stroke: url(#Gradient_bez_nazwy6);
+      }
+
+      .st7 {
+        stroke: url(#Gradient_bez_nazwy);
+      }
+    </style>
+    <linearGradient id="Gradient_bez_nazwy" data-name="Gradient bez nazwy" x1="84.85" y1="326.89" x2="85.38" y2="326.36" gradientTransform="translate(-25420.9712 111987.2244) scale(300.14 -342.07)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#3185ff"/>
+      <stop offset="1" stop-color="#146ef5"/>
+    </linearGradient>
+    <linearGradient id="Gradient_bez_nazwy1" data-name="Gradient bez nazwy" x1="131.08" y1="219.73" x2="131.08" y2="219.73" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy2" data-name="Gradient bez nazwy" x1="92.59" y1="181.05" x2="219.41" y2="181.05" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy3" data-name="Gradient bez nazwy" x1="62.16" y1="183.77" x2="162" y2="183.77" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy4" data-name="Gradient bez nazwy" x1="156" y1="79.7" x2="156" y2="79.7" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy5" data-name="Gradient bez nazwy" x1="182.53" y1="83.75" x2="182.53" y2="83.75" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy6" data-name="Gradient bez nazwy" x1="125.08" y1="172.68" x2="250.3" y2="172.68" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+    <linearGradient id="Gradient_bez_nazwy7" data-name="Gradient bez nazwy" x1="30.82" y1="204.41" x2="281.18" y2="204.41" gradientTransform="matrix(1,0,0,1,0,0)" xlink:href="#Gradient_bez_nazwy"/>
+  </defs>
+  <path class="st7" d="M131.08,158.93c5.01-13.76,20.23-20.86,33.99-15.85,13.76,5.01,20.86,20.23,15.85,33.99M98.59,360v-72.16M67.7,360v-39.65"/>
+  <path class="st2" d="M131.08,219.73"/>
+  <path class="st5" d="M131.08,219.73c7.87,3.8,16.73,5.85,26.1,5.66,30.05-.6,54.84-24.76,56.18-54.78,1.46-32.76-24.56-59.8-56.95-60.03-32.03-.22-57.82,26.37-57.82,58.4v82.53"/>
+  <path class="st0" d="M156,79.7c-19.59,0-37.7,6.38-52.34,17.18-22.58,16.64-35.5,43.36-35.5,71.41v119.55"/>
+  <path class="st3" d="M156,79.7"/>
+  <path class="st4" d="M182.53,83.75"/>
+  <path class="st6" d="M131.08,252.73c7.5,2.2,15.41,3.44,23.59,3.56,48.55.71,88.94-38.48,89.62-87.03.49-35.06-19.46-65.51-48.7-80.21"/>
+  <path class="st1" d="M131.08,284.57c8.04,1.71,16.37,2.61,24.92,2.61,65.82,0,119.18-53.36,119.18-119.18s-53.36-119.18-119.18-119.18-119.18,53.36-119.18,119.18v192"/>
+</svg>

@@ -1,0 +1,31 @@
+# Xcode project generowany przez XcodeGen (odtwarzany z project.yml)
+Privio.xcodeproj/
+
+# Build / DerivedData
+build/
+.build/
+DerivedData/
+*.xcuserstate
+*.xcuserdatad
+xcuserdata/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Scratch
+*.swiftpm
+
+# Lokalny interaktywny przewodnik po kodzie (nie commitujemy)
+privio-przewodnik.html
+
+# Local AI-agent state and temporary worktrees
+.claude/
+
+# Private product-development documentation
+CLAUDE.md
+Docs/*
+!Docs/BROWSER_LOGO_SOURCES.md
+
+# Marketing website - lives locally only, not published to the public repo
+/Website/

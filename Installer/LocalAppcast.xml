@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>Privio Local Updates</title>
+    <link>http://127.0.0.1:8080/</link>
+    <description>Local development updates for Privio.</description>
+    <language>en</language>
+    <item>
+      <title>Privio __VERSION__</title>
+      <description>Local development update.</description>
+      <pubDate>__PUB_DATE__</pubDate>
+      <enclosure
+        url="http://127.0.0.1:8080/Privio-update.pkg"
+        sparkle:version="__BUILD__"
+        sparkle:shortVersionString="__VERSION__"
+        sparkle:installationType="package"
+        sparkle:edSignature="__SIGNATURE__"
+        length="__LENGTH__"
+        type="application/octet-stream"/>
+    </item>
+  </channel>
+</rss>

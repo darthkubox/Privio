@@ -1,0 +1,5236 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "%@ is Locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ jest zablokowane"
+          }
+        }
+      }
+    },
+    "%@ reveal · %@ off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odsłoń · %@ wyłącz"
+          }
+        }
+      }
+    },
+    "%@ reveal · menu off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ odsłoń · menu wyłącz"
+          }
+        }
+      }
+    },
+    "%lld items": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld elementów"
+          }
+        }
+      }
+    },
+    "1 hour": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 godzina"
+          }
+        }
+      }
+    },
+    "1 minute": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1 minuta"
+          }
+        }
+      }
+    },
+    "15 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "15 minut"
+          }
+        }
+      }
+    },
+    "2 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "2 minuty"
+          }
+        }
+      }
+    },
+    "30 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 minut"
+          }
+        }
+      }
+    },
+    "30 seconds": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 sekund"
+          }
+        }
+      }
+    },
+    "5 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "5 minut"
+          }
+        }
+      }
+    },
+    "A Pro feature. Uses a paired Bluetooth device only as a trigger.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Funkcja Pro. Sparowane urządzenie Bluetooth służy wyłącznie jako wyzwalacz."
+          }
+        }
+      }
+    },
+    "About": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O programie"
+          }
+        }
+      }
+    },
+    "Accept": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Akceptuję"
+          }
+        }
+      }
+    },
+    "Access": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp"
+          }
+        }
+      }
+    },
+    "Activate Privio Pro in About to protect websites.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktywuj Privio Pro w sekcji O programie, aby chronić strony."
+          }
+        }
+      }
+    },
+    "Activate Pro": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktywuj Pro"
+          }
+        }
+      }
+    },
+    "Active": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktywne"
+          }
+        }
+      }
+    },
+    "Activity": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktywność"
+          }
+        }
+      }
+    },
+    "Add": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj"
+          }
+        }
+      }
+    },
+    "Add Application": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj aplikację"
+          }
+        }
+      }
+    },
+    "Add Device": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj urządzenie"
+          }
+        }
+      }
+    },
+    "Add Files…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj pliki…"
+          }
+        }
+      }
+    },
+    "Add Privio Vault Shortcut": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj skrót Sejfu Privio"
+          }
+        }
+      }
+    },
+    "Add Vault Shortcut…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj skrót sejfu…"
+          }
+        }
+      }
+    },
+    "Add Website": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj stronę"
+          }
+        }
+      }
+    },
+    "Add a phone, watch or headphones to use it as an automatic lock trigger.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj telefon, zegarek lub słuchawki, aby używać ich do automatycznego wyzwalania blokady."
+          }
+        }
+      }
+    },
+    "Add a website to block it in every browser until you unlock with Touch ID.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj stronę, aby zablokować ją w każdej przeglądarce, dopóki nie odblokujesz Touch ID."
+          }
+        }
+      }
+    },
+    "Add a website to protect it with Touch ID or password.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj stronę, aby chronić ją przez Touch ID lub hasło."
+          }
+        }
+      }
+    },
+    "Add an application to protect it with Touch ID or password.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj aplikację, aby chronić ją Touch ID lub hasłem."
+          }
+        }
+      }
+    },
+    "Add files here or open the mounted vault in Finder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodaj pliki tutaj albo otwórz zamontowany sejf w Finderze."
+          }
+        }
+      }
+    },
+    "Additional": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodatkowe"
+          }
+        }
+      }
+    },
+    "Advanced": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaawansowane"
+          }
+        }
+      }
+    },
+    "After 1 hour": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 1 godzinie"
+          }
+        }
+      }
+    },
+    "After 1 minute": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 1 minucie"
+          }
+        }
+      }
+    },
+    "After 15 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 15 minutach"
+          }
+        }
+      }
+    },
+    "After 2 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 2 minutach"
+          }
+        }
+      }
+    },
+    "After 30 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 30 minutach"
+          }
+        }
+      }
+    },
+    "After 30 seconds": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 30 sekundach"
+          }
+        }
+      }
+    },
+    "After 5 minutes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Po 5 minutach"
+          }
+        }
+      }
+    },
+    "Aliases, symbolic links, and the vault image itself cannot be imported.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie można importować aliasów, dowiązań symbolicznych ani samego obrazu sejfu."
+          }
+        }
+      }
+    },
+    "All configuration stays local.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cała konfiguracja zostaje lokalnie."
+          }
+        }
+      }
+    },
+    "All files and private notes in this vault will be permanently lost. You will need to confirm with Touch ID or your Mac password.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wszystkie pliki i prywatne notatki w tym sejfie zostaną bezpowrotnie utracone. Operację trzeba potwierdzić za pomocą Touch ID lub hasła Maca."
+          }
+        }
+      }
+    },
+    "All installed apps are already protected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wszystkie zainstalowane aplikacje są już chronione"
+          }
+        }
+      }
+    },
+    "Allow Bluetooth for Privio in System Settings, then return here.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zezwól Privio na Bluetooth w Ustawieniach systemowych, a następnie wróć tutaj."
+          }
+        }
+      }
+    },
+    "Always asks for your Mac account password; Touch ID is not used.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zawsze pyta o hasło konta Maca; Touch ID nie jest używany."
+          }
+        }
+      }
+    },
+    "Android phones": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Telefony z Androidem"
+          }
+        }
+      }
+    },
+    "App blocking": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokowanie aplikacji"
+          }
+        }
+      }
+    },
+    "App protection": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona aplikacji"
+          }
+        }
+      }
+    },
+    "Appearance": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wygląd"
+          }
+        }
+      }
+    },
+    "Applies to": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zakres"
+          }
+        }
+      }
+    },
+    "Apps enforced: %lld": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chronionych aplikacji: %lld"
+          }
+        }
+      }
+    },
+    "Area revealed around the cursor.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obszar odsłaniany wokół kursora."
+          }
+        }
+      }
+    },
+    "Armed": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uzbrojone"
+          }
+        }
+      }
+    },
+    "As soon as you step away": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gdy tylko wstaniesz"
+          }
+        }
+      }
+    },
+    "Authenticate": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uwierzytelnij"
+          }
+        }
+      }
+    },
+    "Authenticate with Touch ID": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uwierzytelnij Touch ID"
+          }
+        }
+      }
+    },
+    "Authenticating…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uwierzytelnianie…"
+          }
+        }
+      }
+    },
+    "Authentication": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uwierzytelnianie"
+          }
+        }
+      }
+    },
+    "Authentication failed.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uwierzytelnienie nie powiodło się."
+          }
+        }
+      }
+    },
+    "Auto-lock paused itself": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokada sama się wstrzymała"
+          }
+        }
+      }
+    },
+    "Auto-paused": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-wstrzymane"
+          }
+        }
+      }
+    },
+    "Auto-quit for extra privacy": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Auto-zamykanie dla większej prywatności"
+          }
+        }
+      }
+    },
+    "Autostart at login": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autostart przy logowaniu"
+          }
+        }
+      }
+    },
+    "Back in Privio the status turns Active automatically.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W Privio status zmieni się na Aktywne automatycznie."
+          }
+        }
+      }
+    },
+    "Block websites in every browser. Turning on sets a local web proxy (asks for your admin password once).": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj strony w każdej przeglądarce. Włączenie ustawia lokalne proxy WWW (jednorazowo prosi o hasło administratora)."
+          }
+        }
+      }
+    },
+    "Blocking modules": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Moduły blokowania"
+          }
+        }
+      }
+    },
+    "Bluetooth access is off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp do Bluetooth jest wyłączony"
+          }
+        }
+      }
+    },
+    "Bluetooth devices are unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Urządzenia Bluetooth są niedostępne"
+          }
+        }
+      }
+    },
+    "Bluetooth is off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bluetooth jest wyłączony"
+          }
+        }
+      }
+    },
+    "Blur": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozmycie"
+          }
+        }
+      }
+    },
+    "Blurs protected content so it can’t be read over your shoulder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozmywa chronioną treść, by nie dało się jej odczytać zza pleców."
+          }
+        }
+      }
+    },
+    "Browser Extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozszerzenie przeglądarki"
+          }
+        }
+      }
+    },
+    "Browser extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozszerzenie przeglądarki"
+          }
+        }
+      }
+    },
+    "Browsers do not allow a regular Mac app to silently install an unpacked extension. This one-time confirmation is required by the browser.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przeglądarki nie pozwalają zwykłej aplikacji Mac instalować rozpakowanego rozszerzenia bez potwierdzenia. Ta jednorazowa czynność jest wymagana przez przeglądarkę."
+          }
+        }
+      }
+    },
+    "Built for macOS": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stworzone dla macOS"
+          }
+        }
+      }
+    },
+    "Camera Access Required": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymagany dostęp do kamery"
+          }
+        }
+      }
+    },
+    "Camera access is off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp do kamery jest wyłączony"
+          }
+        }
+      }
+    },
+    "Camera access is off.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dostęp do kamery jest wyłączony."
+          }
+        }
+      }
+    },
+    "Can't measure distance for this device": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie zmierzymy odległości tego urządzenia"
+          }
+        }
+      }
+    },
+    "Cancel": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Anuluj"
+          }
+        }
+      }
+    },
+    "Check Bluetooth and Privio's access in System Settings.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdź Bluetooth i dostęp Privio w Ustawieniach systemowych."
+          }
+        }
+      }
+    },
+    "Check for Updates…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdź aktualizacje…"
+          }
+        }
+      }
+    },
+    "Checking camera access…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzam dostęp do kamery…"
+          }
+        }
+      }
+    },
+    "Choose Manually…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz ręcznie…"
+          }
+        }
+      }
+    },
+    "Choose a nearby or paired Bluetooth device.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz pobliskie lub sparowane urządzenie Bluetooth."
+          }
+        }
+      }
+    },
+    "Choose a trusted device below to enable this.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz poniżej zaufane urządzenie, aby włączyć."
+          }
+        }
+      }
+    },
+    "Choose manifest.json in the FirefoxExtension folder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wskaż plik manifest.json w folderze FirefoxExtension."
+          }
+        }
+      }
+    },
+    "Chrome Extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozszerzenie Chrome"
+          }
+        }
+      }
+    },
+    "Chrome Web Store": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chrome Web Store"
+          }
+        }
+      }
+    },
+    "Chrome does not allow a regular Mac app to silently install an unpacked extension. This one-time confirmation is required by the browser.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chrome nie pozwala zwykłej aplikacji Mac instalować rozpakowanego rozszerzenia bez potwierdzenia. Ta jednorazowa czynność jest wymagana przez przeglądarkę."
+          }
+        }
+      }
+    },
+    "Chrome extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozszerzenie Chrome"
+          }
+        }
+      }
+    },
+    "Chrome, Edge, Brave, Opera, Vivaldi, Arc": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chrome, Edge, Brave, Opera, Vivaldi, Arc"
+          }
+        }
+      }
+    },
+    "Chromium": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chromium"
+          }
+        }
+      }
+    },
+    "Circle": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Koło"
+          }
+        }
+      }
+    },
+    "Clear History": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyczyść historię"
+          }
+        }
+      }
+    },
+    "Click 'Install manually' - Privio reveals the add-on folder and opens about:debugging.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij 'Zainstaluj ręcznie' - Privio pokaże folder dodatku i otworzy about:debugging."
+          }
+        }
+      }
+    },
+    "Click 'Install manually' - Privio reveals the extension folder and opens chrome://extensions.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij 'Zainstaluj ręcznie' - Privio pokaże folder wtyczki i otworzy chrome://extensions."
+          }
+        }
+      }
+    },
+    "Click 'Load unpacked' and choose the ChromeExtension folder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij 'Załaduj rozpakowane' i wskaż folder ChromeExtension."
+          }
+        }
+      }
+    },
+    "Click “Install from Privio” above.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij wyżej „Zainstaluj z Privio”."
+          }
+        }
+      }
+    },
+    "Click “Load unpacked” and select the ChromeExtension folder shown in Finder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij „Załaduj rozpakowane” i wybierz folder ChromeExtension pokazany w Finderze."
+          }
+        }
+      }
+    },
+    "Click “Prepare Extension” below.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kliknij poniżej „Przygotuj rozszerzenie”."
+          }
+        }
+      }
+    },
+    "Close": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij"
+          }
+        }
+      }
+    },
+    "Close photo": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij"
+          }
+        }
+      }
+    },
+    "Closing the last tab locks the website immediately.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknięcie ostatniej karty natychmiast blokuje stronę."
+          }
+        }
+      }
+    },
+    "Coming soon": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wkrótce"
+          }
+        }
+      }
+    },
+    "Configuration integrity check failed": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sprawdzenie integralności konfiguracji nie powiodło się"
+          }
+        }
+      }
+    },
+    "Confirm with Touch ID or your Mac password to open the control panel.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Potwierdź Touch ID lub hasłem Maca, aby otworzyć panel."
+          }
+        }
+      }
+    },
+    "Connected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Połączone"
+          }
+        }
+      }
+    },
+    "Connected - signal unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Połączone - sygnał niedostępny"
+          }
+        }
+      }
+    },
+    "Connected · protection active": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Połączono · ochrona działa"
+          }
+        }
+      }
+    },
+    "Connected · protection off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Połączono · ochrona wyłączona"
+          }
+        }
+      }
+    },
+    "Contact": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kontakt"
+          }
+        }
+      }
+    },
+    "Copy": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiuj"
+          }
+        }
+      }
+    },
+    "Couldn’t add application": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie można dodać aplikacji"
+          }
+        }
+      }
+    },
+    "Create Private Vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwórz prywatny sejf"
+          }
+        }
+      }
+    },
+    "Create a movable shortcut with a macOS folder icon and the Privio mark. It can be kept anywhere or dragged to the right side of the Dock. Opening it always authenticates before mounting the vault.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwórz przenośny skrót z ikoną folderu macOS i znakiem Privio. Możesz trzymać go w dowolnym miejscu lub przeciągnąć na prawą stronę Docka. Otwarcie zawsze wymaga uwierzytelnienia przed zamontowaniem sejfu."
+          }
+        }
+      }
+    },
+    "Create a private APFS vault encrypted with AES-256. Its key is protected by Touch ID or your Mac password and never leaves this Mac.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Utwórz prywatny sejf APFS szyfrowany AES‑256. Jego klucz jest chroniony przez Touch ID lub hasło Maca i nie opuszcza tego komputera."
+          }
+        }
+      }
+    },
+    "Creating encrypted vault…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tworzenie szyfrowanego sejfu…"
+          }
+        }
+      }
+    },
+    "Currently out of range": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obecnie poza zasięgiem"
+          }
+        }
+      }
+    },
+    "Dark": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ciemny"
+          }
+        }
+      }
+    },
+    "Darkens the screen and reveals only a flashlight around the cursor.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przyciemnia ekran i odsłania tylko latarkę wokół kursora."
+          }
+        }
+      }
+    },
+    "Decline & Quit": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odrzuć i zamknij"
+          }
+        }
+      }
+    },
+    "Default follows your Mac’s language. Changing this restarts Privio.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślnie zgodny z językiem Maca. Zmiana restartuje Privio."
+          }
+        }
+      }
+    },
+    "Default lock timeout": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślny czas do blokady"
+          }
+        }
+      }
+    },
+    "Default quit timeout": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślny czas do zamknięcia"
+          }
+        }
+      }
+    },
+    "Default unlock method": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślna metoda odblokowania"
+          }
+        }
+      }
+    },
+    "Defaults for new apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Domyślne dla nowych aplikacji"
+          }
+        }
+      }
+    },
+    "Delete All": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń wszystko"
+          }
+        }
+      }
+    },
+    "Delete All Photos": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń wszystkie zdjęcia"
+          }
+        }
+      }
+    },
+    "Delete Forever": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń na zawsze"
+          }
+        }
+      }
+    },
+    "Delete Private Vault?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usunąć prywatny sejf?"
+          }
+        }
+      }
+    },
+    "Delete Vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń sejf"
+          }
+        }
+      }
+    },
+    "Delete Vault…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń sejf…"
+          }
+        }
+      }
+    },
+    "Delete all failed-attempt photos?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usunąć wszystkie zdjęcia nieudanych prób?"
+          }
+        }
+      }
+    },
+    "Deleting vault…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuwanie sejfu…"
+          }
+        }
+      }
+    },
+    "Detected Privio extensions": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wykryte rozszerzenia Privio"
+          }
+        }
+      }
+    },
+    "Device name": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nazwa urządzenia"
+          }
+        }
+      }
+    },
+    "Devices": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Urządzenia"
+          }
+        }
+      }
+    },
+    "Dimming": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przyciemnienie"
+          }
+        }
+      }
+    },
+    "Dims and lowers contrast toward the edges so it’s hard to read from the side. A software effect - it can’t fully match a physical privacy filter.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przyciemnia i obniża kontrast przy brzegach, utrudniając czytanie z boku. To efekt programowy - nie zastąpi w pełni fizycznego filtra prywatyzującego."
+          }
+        }
+      }
+    },
+    "Disabled": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyłączone"
+          }
+        }
+      }
+    },
+    "Done": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gotowe"
+          }
+        }
+      }
+    },
+    "Download QR preview - coming soon": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Makieta kodu QR do pobrania - wkrótce"
+          }
+        }
+      }
+    },
+    "Drag files here, add them, or open the mounted vault in Finder.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przeciągnij pliki tutaj, dodaj je lub otwórz zamontowany sejf w Finderze."
+          }
+        }
+      }
+    },
+    "Drop to add to the vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Upuść, aby dodać do sejfu"
+          }
+        }
+      }
+    },
+    "Effect": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Efekt"
+          }
+        }
+      }
+    },
+    "Enable auto-quit": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włącz auto-zamykanie"
+          }
+        }
+      }
+    },
+    "Enable auto-quit?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włączyć auto-zamykanie?"
+          }
+        }
+      }
+    },
+    "Enable camera access for Privio in System Settings → Privacy & Security → Camera, then try again.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włącz dostęp do kamery dla Privio w Ustawieniach systemowych → Prywatność i bezpieczeństwo → Kamera, a potem spróbuj ponownie."
+          }
+        }
+      }
+    },
+    "Encrypted and locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaszyfrowany i zablokowany"
+          }
+        }
+      }
+    },
+    "Encrypted files": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szyfrowane pliki"
+          }
+        }
+      }
+    },
+    "Encrypted files and private notes in one protected place.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szyfrowane pliki i prywatne notatki w jednym chronionym miejscu."
+          }
+        }
+      }
+    },
+    "Encrypted files, private notes, recovery and auto-lock settings.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szyfrowane pliki, prywatne notatki, odzyskiwanie i ustawienia autoblokady."
+          }
+        }
+      }
+    },
+    "Encrypted notes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szyfrowane notatki"
+          }
+        }
+      }
+    },
+    "Encrypted vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szyfrowany sejf"
+          }
+        }
+      }
+    },
+    "Enter a Pro license key to unlock Pro features. It’s verified entirely on your Mac - no account, no online activation.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz klucz licencji Pro, aby odblokować funkcje Pro. Weryfikacja odbywa się w całości na Twoim Macu - bez konta i aktywacji online."
+          }
+        }
+      }
+    },
+    "Enter code": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz kod"
+          }
+        }
+      }
+    },
+    "Enter code instead": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz kod zamiast tego"
+          }
+        }
+      }
+    },
+    "Enter pairing code": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz kod parowania"
+          }
+        }
+      }
+    },
+    "Enter the 26-character code shown under the QR code. Hyphens are optional.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz 26-znakowy kod widoczny pod kodem QR. Myślniki są opcjonalne."
+          }
+        }
+      }
+    },
+    "Enter the 64-character recovery key created with this vault.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz 64-znakowy klucz odzyskiwania utworzony z tym sejfem."
+          }
+        }
+      }
+    },
+    "Enter the watch pairing code": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz kod parowania z zegarka"
+          }
+        }
+      }
+    },
+    "Enter the website address you want Privio to protect.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wpisz adres strony, którą Privio ma chronić."
+          }
+        }
+      }
+    },
+    "Failed authentication photo": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdjęcie z nieudanej próby"
+          }
+        }
+      }
+    },
+    "Failed unlock attempts": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieudane próby odblokowania"
+          }
+        }
+      }
+    },
+    "Falls back to your Mac password - e.g. with the lid closed.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Awaryjnie używa hasła Maca - np. przy zamkniętej klapie."
+          }
+        }
+      }
+    },
+    "Far away": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Daleko"
+          }
+        }
+      }
+    },
+    "File": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Plik"
+          }
+        }
+      }
+    },
+    "Files": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pliki"
+          }
+        }
+      }
+    },
+    "Files are readable while the vault is mounted. Lock it when you finish.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pliki są dostępne, gdy sejf jest zamontowany. Po zakończeniu zablokuj go."
+          }
+        }
+      }
+    },
+    "Filter": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtr"
+          }
+        }
+      }
+    },
+    "Finder & Dock shortcut": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skrót Findera i Docka"
+          }
+        }
+      }
+    },
+    "Firefox": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firefox"
+          }
+        }
+      }
+    },
+    "Firefox Add-ons": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Firefox Add-ons"
+          }
+        }
+      }
+    },
+    "Flashlight shape": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kształt latarki"
+          }
+        }
+      }
+    },
+    "Flashlight size": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozmiar latarki"
+          }
+        }
+      }
+    },
+    "Folder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folder"
+          }
+        }
+      }
+    },
+    "Force quit if it doesn’t respond": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymuś zamknięcie, jeśli nie odpowiada"
+          }
+        }
+      }
+    },
+    "Galaxy Watch briefly connects and disconnects even while it is on your wrist. Automatic locking stays disabled until its nearby BLE signal is identified.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Galaxy Watch na krótko łączy się i rozłącza nawet wtedy, gdy masz go na ręce. Automatyczna blokada pozostanie wyłączona, dopóki nie rozpoznamy jego pobliskiego sygnału BLE."
+          }
+        }
+      }
+    },
+    "Good to know": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Warto wiedzieć"
+          }
+        }
+      }
+    },
+    "Hide apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukryj aplikacje"
+          }
+        }
+      }
+    },
+    "Hide protected app windows on demand. Configure it in the Privacy Curtain section.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukrywaj okna chronionych aplikacji na żądanie. Skonfiguruj w sekcji Zasłona prywatności."
+          }
+        }
+      }
+    },
+    "Hide protected app windows until you reveal them.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ukrywaj okna chronionych aplikacji, dopóki ich nie odsłonisz."
+          }
+        }
+      }
+    },
+    "Hold the shortcut to reveal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przytrzymaj skrót, aby odsłonić"
+          }
+        }
+      }
+    },
+    "Hold ⌥⌘ to reveal temporarily. Press ⌥⌘P to lock or unlock Reveal.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przytrzymaj ⌥⌘, aby chwilowo odsłonić. Naciśnij ⌥⌘P, aby zablokować lub odblokować odsłonięcie."
+          }
+        }
+      }
+    },
+    "How it works": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jak to działa"
+          }
+        }
+      }
+    },
+    "I Saved It": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz zapisany"
+          }
+        }
+      }
+    },
+    "If %@ won’t close on its own, Privio force‑quits it - unsaved work may be lost.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jeśli %@ nie zamknie się samo, Privio wymusi zamknięcie - niezapisana praca może zostać utracona."
+          }
+        }
+      }
+    },
+    "Immediately": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Natychmiast"
+          }
+        }
+      }
+    },
+    "In Chrome, enable Developer mode in the upper-right corner.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W Chrome włącz „Tryb dewelopera” w prawym górnym rogu."
+          }
+        }
+      }
+    },
+    "In range": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W zasięgu"
+          }
+        }
+      }
+    },
+    "In your browser, enable Developer mode in the upper-right corner.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W przeglądarce włącz „Tryb dewelopera” w prawym górnym rogu."
+          }
+        }
+      }
+    },
+    "In your browser, enable Developer mode.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "W przeglądarce włącz „Tryb dewelopera”."
+          }
+        }
+      }
+    },
+    "Inactive": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieaktywne"
+          }
+        }
+      }
+    },
+    "Install extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj rozszerzenie"
+          }
+        }
+      }
+    },
+    "Install from Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj z Privio"
+          }
+        }
+      }
+    },
+    "Install manually": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj ręcznie"
+          }
+        }
+      }
+    },
+    "Install the Privio add-on for your browser.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj dodatek Privio dla swojej przeglądarki."
+          }
+        }
+      }
+    },
+    "Interface language": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Język interfejsu"
+          }
+        }
+      }
+    },
+    "It locked several times in a row (flickering signal). Resume when you're ready.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokowała kilka razy pod rząd (migotanie sygnału). Wznów, gdy będziesz gotów(-owa)."
+          }
+        }
+      }
+    },
+    "Keep prying eyes out of your email, conversations and photos. Choose which apps to lock and unlock them when you need them.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chroń swoją pocztę, rozmowy i zdjęcia przed ciekawskimi. Wybierz aplikacje, które chcesz zablokować i odblokowuj je wtedy, gdy ich potrzebujesz."
+          }
+        }
+      }
+    },
+    "Keep the Privio Beacon QR code inside the camera frame.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trzymaj kod QR z zegarka w kadrze kamery."
+          }
+        }
+      }
+    },
+    "Keep the device nearby or pair it first in macOS Bluetooth settings.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trzymaj urządzenie w pobliżu lub najpierw sparuj je w ustawieniach Bluetooth macOS."
+          }
+        }
+      }
+    },
+    "Keep your phone, watch or headphones nearby while Privio scans.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trzymaj telefon, zegarek lub słuchawki w pobliżu podczas skanowania."
+          }
+        }
+      }
+    },
+    "Language": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Język"
+          }
+        }
+      }
+    },
+    "License %@": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Licencja %@"
+          }
+        }
+      }
+    },
+    "License key": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz licencji"
+          }
+        }
+      }
+    },
+    "License verified locally. No account or online activation required.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Licencja zweryfikowana lokalnie. Bez konta i aktywacji online."
+          }
+        }
+      }
+    },
+    "Light": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jasny"
+          }
+        }
+      }
+    },
+    "Light or dark. “System” follows your Mac’s appearance.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jasny lub ciemny. „System” podąża za wyglądem Maca."
+          }
+        }
+      }
+    },
+    "Load unpacked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozpakowany folder"
+          }
+        }
+      }
+    },
+    "Lock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj"
+          }
+        }
+      }
+    },
+    "Lock All Apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj wszystkie aplikacje"
+          }
+        }
+      }
+    },
+    "Lock Privio apps, sites & vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj apki, strony i sejf Privio"
+          }
+        }
+      }
+    },
+    "Lock Reveal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj odsłonięcie"
+          }
+        }
+      }
+    },
+    "Lock Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia blokady"
+          }
+        }
+      }
+    },
+    "Lock after inactivity": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj po bezczynności"
+          }
+        }
+      }
+    },
+    "Lock after screen lock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj po zablokowaniu ekranu"
+          }
+        }
+      }
+    },
+    "Lock after sleep": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj po uśpieniu"
+          }
+        }
+      }
+    },
+    "Lock any app with Touch ID": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj dowolną aplikację Touch ID"
+          }
+        }
+      }
+    },
+    "Lock protected apps after screen lock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj chronione aplikacje po zablokowaniu ekranu"
+          }
+        }
+      }
+    },
+    "Lock protected apps after sleep": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj chronione aplikacje po uśpieniu"
+          }
+        }
+      }
+    },
+    "Lock the screen": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokuj ekran"
+          }
+        }
+      }
+    },
+    "Lock triggers": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyzwalacze blokady"
+          }
+        }
+      }
+    },
+    "Lock when Mac sleeps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj po uśpieniu Maca"
+          }
+        }
+      }
+    },
+    "Lock when the screen is locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj po zablokowaniu ekranu"
+          }
+        }
+      }
+    },
+    "Lock when you walk away": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuj, gdy się oddalisz"
+          }
+        }
+      }
+    },
+    "Locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zablokowane"
+          }
+        }
+      }
+    },
+    "Locking…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokowanie…"
+          }
+        }
+      }
+    },
+    "Locks after a longer distance →": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuje po dłuższym oddaleniu →"
+          }
+        }
+      }
+    },
+    "Locks after a shorter distance →": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuje po krótszym oddaleniu →"
+          }
+        }
+      }
+    },
+    "Locks protected apps, blocked sites and the Private Vault - fully native.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokuje chronione apki, zablokowane strony i Prywatny sejf - w pełni natywnie."
+          }
+        }
+      }
+    },
+    "Manual installation": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instalacja ręczna"
+          }
+        }
+      }
+    },
+    "Manual installation instructions": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instrukcja instalacji ręcznej"
+          }
+        }
+      }
+    },
+    "Master switch for all protection.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Główny przełącznik całej ochrony."
+          }
+        }
+      }
+    },
+    "Mounted and readable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamontowany i dostępny"
+          }
+        }
+      }
+    },
+    "Mozilla Firefox": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mozilla Firefox"
+          }
+        }
+      }
+    },
+    "Nearby Bluetooth devices": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pobliskie urządzenia Bluetooth"
+          }
+        }
+      }
+    },
+    "Never": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nigdy"
+          }
+        }
+      }
+    },
+    "New Note": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nowa notatka"
+          }
+        }
+      }
+    },
+    "New note": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nowa notatka"
+          }
+        }
+      }
+    },
+    "Next room": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sąsiedni pokój"
+          }
+        }
+      }
+    },
+    "No activity yet": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak aktywności"
+          }
+        }
+      }
+    },
+    "No analytics": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak analityki"
+          }
+        }
+      }
+    },
+    "No camera is available on this Mac.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Na tym Macu nie ma dostępnej kamery."
+          }
+        }
+      }
+    },
+    "No cloud sync": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak synchronizacji z chmurą"
+          }
+        }
+      }
+    },
+    "No current signal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak bieżącego sygnału"
+          }
+        }
+      }
+    },
+    "No current signal - paired but not connected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak bieżącego sygnału - sparowane, ale niepołączone"
+          }
+        }
+      }
+    },
+    "No files yet": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie ma jeszcze plików"
+          }
+        }
+      }
+    },
+    "No installation detected. Open a browser with Privio installed to make it appear here.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie wykryto instalacji. Otwórz przeglądarkę z zainstalowanym Privio, aby pojawiła się tutaj."
+          }
+        }
+      }
+    },
+    "No matches": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak wyników"
+          }
+        }
+      }
+    },
+    "No notes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak notatek"
+          }
+        }
+      }
+    },
+    "No paired Bluetooth devices found": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie znaleziono sparowanych urządzeń Bluetooth"
+          }
+        }
+      }
+    },
+    "No protected apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak chronionych aplikacji"
+          }
+        }
+      }
+    },
+    "No protected apps are open": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Żadna chroniona aplikacja nie jest otwarta"
+          }
+        }
+      }
+    },
+    "No protected websites": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak chronionych stron"
+          }
+        }
+      }
+    },
+    "No protected websites yet": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie ma jeszcze chronionych stron"
+          }
+        }
+      }
+    },
+    "No telemetry": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak telemetrii"
+          }
+        }
+      }
+    },
+    "No tracking. No sync. Just privacy.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez śledzenia. Bez synchronizacji. Tylko prywatność."
+          }
+        }
+      }
+    },
+    "No trusted devices yet": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie dodano jeszcze zaufanych urządzeń"
+          }
+        }
+      }
+    },
+    "Not configured": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nieskonfigurowany"
+          }
+        }
+      }
+    },
+    "Not connected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niepołączone"
+          }
+        }
+      }
+    },
+    "Not detected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niewykryte"
+          }
+        }
+      }
+    },
+    "Not paired - these may belong to people nearby.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Niesparowane - mogą należeć do osób w pobliżu."
+          }
+        }
+      }
+    },
+    "Not starting at login": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie uruchamia się przy logowaniu"
+          }
+        }
+      }
+    },
+    "Notes": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Notatki"
+          }
+        }
+      }
+    },
+    "Nothing is sent off your Mac.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nic nie opuszcza Twojego Maca."
+          }
+        }
+      }
+    },
+    "Notification settings…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia powiadomień…"
+          }
+        }
+      }
+    },
+    "Notifications can reveal content from %@ even while it’s locked. Open macOS notification settings to turn them off.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Powiadomienia mogą pokazać treść z %@ nawet przy włączonej blokadzie. Otwórz ustawienia powiadomień macOS, aby je wyłączyć."
+          }
+        }
+      }
+    },
+    "OFF": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WYŁ."
+          }
+        }
+      }
+    },
+    "OK": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "OK"
+          }
+        }
+      }
+    },
+    "ON": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "WŁ."
+          }
+        }
+      }
+    },
+    "Off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyłączone"
+          }
+        }
+      }
+    },
+    "Off. Turn on to lock automatically when your device leaves.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyłączone. Włącz, aby blokować automatycznie po oddaleniu urządzenia."
+          }
+        }
+      }
+    },
+    "On - will lock %@ after the device is out of range.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włączone - zablokuje %@ po wyjściu urządzenia poza zasięg."
+          }
+        }
+      }
+    },
+    "One Chromium extension works in all browsers listed above.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Jedno rozszerzenie Chromium działa we wszystkich wymienionych przeglądarkach."
+          }
+        }
+      }
+    },
+    "Only when far": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dopiero z daleka"
+          }
+        }
+      }
+    },
+    "Open": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz"
+          }
+        }
+      }
+    },
+    "Open 'This Firefox' and click 'Load Temporary Add-on'.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz 'Ten Firefox' i kliknij 'Załaduj dodatek tymczasowy'."
+          }
+        }
+      }
+    },
+    "Open Bluetooth Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz ustawienia Bluetooth"
+          }
+        }
+      }
+    },
+    "Open Camera Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz ustawienia kamery"
+          }
+        }
+      }
+    },
+    "Open Photos Folder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz folder ze zdjęciami"
+          }
+        }
+      }
+    },
+    "Open Privio…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz Privio…"
+          }
+        }
+      }
+    },
+    "Open Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz Ustawienia"
+          }
+        }
+      }
+    },
+    "Open apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwarte aplikacje"
+          }
+        }
+      }
+    },
+    "Open files can prevent safe locking; Privio never forces an unsafe eject.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwarte pliki mogą uniemożliwić bezpieczną blokadę; Privio nigdy nie wymusza ryzykownego odmontowania."
+          }
+        }
+      }
+    },
+    "Open in Finder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz w Finderze"
+          }
+        }
+      }
+    },
+    "Open photo": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz zdjęcie"
+          }
+        }
+      }
+    },
+    "Opt-in. Includes canceled prompts; photos stay in Privio and the oldest are deleted after 20 images.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcjonalne. Obejmuje też anulowane próby; zdjęcia są dostępne w Privio, a najstarsze są usuwane po 20 plikach."
+          }
+        }
+      }
+    },
+    "Opt-in. Photos stay on this Mac; the oldest are deleted after 20 images.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcjonalne. Zdjęcia zostają na tym Macu; najstarsze są usuwane po 20 zdjęciach."
+          }
+        }
+      }
+    },
+    "Optional - adds in-page unlock in Chromium": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcjonalnie - wygodne odblokowanie w karcie (Chromium)"
+          }
+        }
+      }
+    },
+    "Optional global shortcut": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opcjonalny skrót globalny"
+          }
+        }
+      }
+    },
+    "Out of range": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poza zasięgiem"
+          }
+        }
+      }
+    },
+    "Out-of-range signal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sygnał poza zasięgiem"
+          }
+        }
+      }
+    },
+    "Pair": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparuj"
+          }
+        }
+      }
+    },
+    "Pair a phone, watch or headphones in System Settings → Bluetooth.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparuj telefon, zegarek lub słuchawki w Ustawieniach systemowych → Bluetooth."
+          }
+        }
+      }
+    },
+    "Pair new device…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparuj nowe urządzenie…"
+          }
+        }
+      }
+    },
+    "Pair with a Privio companion app": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparuj z aplikacją Privio"
+          }
+        }
+      }
+    },
+    "Paired": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparowane"
+          }
+        }
+      }
+    },
+    "Paired devices": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparowane urządzenia"
+          }
+        }
+      }
+    },
+    "Paired devices and nearby Bluetooth devices (e.g. a watch or band) appear below. Pick up to %lld that stay with you.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Poniżej pojawią się urządzenia sparowane oraz pobliskie urządzenia Bluetooth (np. zegarek lub opaska). Wybierz do %lld, które masz przy sobie."
+          }
+        }
+      }
+    },
+    "Paired with this Mac": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sparowane z tym Makiem"
+          }
+        }
+      }
+    },
+    "Pairing code: %@": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kod parowania: %@"
+          }
+        }
+      }
+    },
+    "Pairing is currently available for PrivioWear on Wear OS. Other companion apps are interface previews.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parowanie działa obecnie w PrivioWear na Wear OS. Pozostałe aplikacje są na razie makietami interfejsu."
+          }
+        }
+      }
+    },
+    "Password only": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tylko hasło"
+          }
+        }
+      }
+    },
+    "Pause locking below battery": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wstrzymaj blokadę poniżej baterii"
+          }
+        }
+      }
+    },
+    "Paused": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wstrzymane"
+          }
+        }
+      }
+    },
+    "Paused - no automatic locking until you resume.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wstrzymane - brak automatycznej blokady, dopóki nie wznowisz."
+          }
+        }
+      }
+    },
+    "Permanently delete the encrypted vault and everything stored inside it. This action cannot be undone.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Trwale usuń zaszyfrowany sejf i całą jego zawartość. Tej operacji nie można cofnąć."
+          }
+        }
+      }
+    },
+    "Photo unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zdjęcie jest niedostępne"
+          }
+        }
+      }
+    },
+    "Pick up to %lld devices that stay with you": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz do %lld urządzeń, które masz przy sobie"
+          }
+        }
+      }
+    },
+    "Point the camera at the QR code.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skieruj kamerę na kod QR."
+          }
+        }
+      }
+    },
+    "Prepare Extension": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przygotuj rozszerzenie"
+          }
+        }
+      }
+    },
+    "Press shortcut…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Naciśnij skrót…"
+          }
+        }
+      }
+    },
+    "Privacy": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prywatność"
+          }
+        }
+      }
+    },
+    "Privacy Curtain": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasłona prywatności"
+          }
+        }
+      }
+    },
+    "Privacy Curtain · reveal: hold ⌥⌘ · turn off from the Privio menu bar": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasłona prywatności · odsłoń: przytrzymaj ⌥⌘ · wyłącz ikoną Privio w pasku menu"
+          }
+        }
+      }
+    },
+    "Privacy Curtain · reveal: hold ⌥⌘ · turn off: %@ or the Privio menu bar": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasłona prywatności · odsłoń: przytrzymaj ⌥⌘ · wyłącz: %@ lub ikoną Privio w pasku menu"
+          }
+        }
+      }
+    },
+    "Privacy filter": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Filtr prywatności"
+          }
+        }
+      }
+    },
+    "Private Vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prywatny sejf"
+          }
+        }
+      }
+    },
+    "Private Vault…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prywatny sejf…"
+          }
+        }
+      }
+    },
+    "Privio Free": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio Free"
+          }
+        }
+      }
+    },
+    "Privio Pro": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio Pro"
+          }
+        }
+      }
+    },
+    "Privio Watch": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zegarek Privio"
+          }
+        }
+      }
+    },
+    "Privio can’t protect itself.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio nie może chronić samego siebie."
+          }
+        }
+      }
+    },
+    "Privio is Active": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio jest aktywne"
+          }
+        }
+      }
+    },
+    "Privio is Off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio jest wyłączone"
+          }
+        }
+      }
+    },
+    "Privio is active": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio jest aktywne"
+          }
+        }
+      }
+    },
+    "Privio is locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio jest zablokowane"
+          }
+        }
+      }
+    },
+    "Privio needs Bluetooth to see your devices. Turn it on for Privio in System Settings.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio potrzebuje Bluetooth, aby widzieć Twoje urządzenia. Włącz je dla Privio w Ustawieniach systemowych."
+          }
+        }
+      }
+    },
+    "Privio needs the camera to scan the watch QR code. Turn it on for Privio in System Settings, then scan again. You can also use „Enter code” instead.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio potrzebuje kamery, aby zeskanować kod QR z zegarka. Włącz ją dla Privio w Ustawieniach systemowych i zeskanuj ponownie. Możesz też użyć „Wpisz kod”."
+          }
+        }
+      }
+    },
+    "Privio never measures how you use it.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio nigdy nie mierzy, jak go używasz."
+          }
+        }
+      }
+    },
+    "Privio protects access to an app’s interface - not the app’s files, databases or exports on disk.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio chroni dostęp do interfejsu aplikacji - nie jej plików, baz danych ani eksportów na dysku."
+          }
+        }
+      }
+    },
+    "Privio sends no usage data to us.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio nie wysyła nam danych o sposobie używania."
+          }
+        }
+      }
+    },
+    "Privio will close %@ automatically after inactivity. Any unsaved changes in %@ may be lost - especially with “Force quit if it doesn’t respond” turned on. Are you sure you want to enable auto-quit?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio automatycznie zamknie %@ po bezczynności. Niezapisane zmiany w %@ mogą zostać utracone - zwłaszcza przy włączonym „Wymuś zamknięcie, jeśli nie odpowiada”. Na pewno włączyć auto-zamykanie?"
+          }
+        }
+      }
+    },
+    "PrivioWear detected - confirm it using the pairing QR or code above.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wykryto PrivioWear - potwierdź urządzenie kodem QR lub kodem parowania powyżej."
+          }
+        }
+      }
+    },
+    "Protect": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chroń"
+          }
+        }
+      }
+    },
+    "Protect %@": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chroń %@"
+          }
+        }
+      }
+    },
+    "Protect selected apps with Touch ID.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chroń wybrane aplikacje Touch ID."
+          }
+        }
+      }
+    },
+    "Protect this website": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chroń tę stronę"
+          }
+        }
+      }
+    },
+    "Protected Apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chronione aplikacje"
+          }
+        }
+      }
+    },
+    "Protected Websites": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chronione strony"
+          }
+        }
+      }
+    },
+    "Protected apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chronione aplikacje"
+          }
+        }
+      }
+    },
+    "Protected apps are NOT being enforced": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chronione aplikacje NIE są egzekwowane"
+          }
+        }
+      }
+    },
+    "Protection": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona"
+          }
+        }
+      }
+    },
+    "Protection begins with your session.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona zaczyna się wraz z sesją."
+          }
+        }
+      }
+    },
+    "Protection is active": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona jest aktywna"
+          }
+        }
+      }
+    },
+    "Protection is off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona jest wyłączona"
+          }
+        }
+      }
+    },
+    "Protection status": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stan ochrony"
+          }
+        }
+      }
+    },
+    "Protection won’t resume automatically after a restart": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona nie wznowi się automatycznie po ponownym uruchomieniu"
+          }
+        }
+      }
+    },
+    "Proximity Lock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokada po odejściu"
+          }
+        }
+      }
+    },
+    "Proximity auto-lock is part of Privio Pro. Unlock it once, offline, to lock your Mac automatically when your phone, watch or headphones leave.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokada po odejściu jest częścią Privio Pro. Odblokuj ją raz, offline, aby Mac blokował się automatycznie, gdy Twój telefon, zegarek lub słuchawki się oddalą."
+          }
+        }
+      }
+    },
+    "Quit Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij Privio"
+          }
+        }
+      }
+    },
+    "Quit after inactivity": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zamknij po bezczynności"
+          }
+        }
+      }
+    },
+    "Quit timeout is shorter than the lock timeout - the app will quit before it locks.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czas do zamknięcia jest krótszy niż czas do blokady - aplikacja zamknie się, zanim się zablokuje."
+          }
+        }
+      }
+    },
+    "Recovering vault…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odzyskiwanie sejfu…"
+          }
+        }
+      }
+    },
+    "Recovery": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odzyskiwanie"
+          }
+        }
+      }
+    },
+    "Recovery key": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz odzyskiwania"
+          }
+        }
+      }
+    },
+    "Rectangle": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Prostokąt"
+          }
+        }
+      }
+    },
+    "Refresh": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odśwież"
+          }
+        }
+      }
+    },
+    "Remove App": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń aplikację"
+          }
+        }
+      }
+    },
+    "Remove Device": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń urządzenie"
+          }
+        }
+      }
+    },
+    "Remove Website": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń stronę"
+          }
+        }
+      }
+    },
+    "Remove license": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usuń licencję"
+          }
+        }
+      }
+    },
+    "Required for reliable website protection in Chrome.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymagane do niezawodnej ochrony stron w Chrome."
+          }
+        }
+      }
+    },
+    "Required for reliable website protection.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymagane do niezawodnej ochrony stron."
+          }
+        }
+      }
+    },
+    "Required for website protection": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymagane do ochrony stron"
+          }
+        }
+      }
+    },
+    "Requires Touch ID. Stops protection, removes Privio’s settings and license, and moves Privio to the Trash. Your protected apps and their data are not touched.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymaga Touch ID. Zatrzymuje ochronę, usuwa ustawienia i licencję Privio oraz przenosi Privio do Kosza. Twoje chronione aplikacje i ich dane pozostają nietknięte."
+          }
+        }
+      }
+    },
+    "Requires Touch ID; can’t unlock when Touch ID is unavailable.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wymaga Touch ID; nie odblokujesz, gdy Touch ID jest niedostępny."
+          }
+        }
+      }
+    },
+    "Resume": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wznów"
+          }
+        }
+      }
+    },
+    "Return to Privio - the status will change to Active automatically.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wróć do Privio - status automatycznie zmieni się na „Aktywne”."
+          }
+        }
+      }
+    },
+    "Reveal in Finder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż w Finderze"
+          }
+        }
+      }
+    },
+    "Reveal shortcuts": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skróty odsłaniania"
+          }
+        }
+      }
+    },
+    "Reveal: hold %@": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odsłoń: przytrzymaj %@"
+          }
+        }
+      }
+    },
+    "Reveal: hold ⌥⌘ · lock ⌥⌘P": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odsłona: przytrzymaj ⌥⌘ · zablokuj ⌥⌘P"
+          }
+        }
+      }
+    },
+    "Right by the desk": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tuż przy biurku"
+          }
+        }
+      }
+    },
+    "Roughly how far you walk off before Privio locks. Real range depends on walls and where you keep the watch.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orientacyjnie jak daleko musisz odejść, zanim Privio zablokuje. Realny zasięg zależy od ścian i tego, gdzie masz zegarek."
+          }
+        }
+      }
+    },
+    "Safety": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpieczeństwo"
+          }
+        }
+      }
+    },
+    "Same room": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten sam pokój"
+          }
+        }
+      }
+    },
+    "Save your recovery key": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zapisz klucz odzyskiwania"
+          }
+        }
+      }
+    },
+    "Scan QR": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skanuj QR"
+          }
+        }
+      }
+    },
+    "Scan pairing QR": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skanuj QR parowania"
+          }
+        }
+      }
+    },
+    "Scan the QR code on your watch": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zeskanuj kod QR z zegarka"
+          }
+        }
+      }
+    },
+    "Schedules": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Harmonogramy"
+          }
+        }
+      }
+    },
+    "Search applications…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szukaj aplikacji…"
+          }
+        }
+      }
+    },
+    "Search websites…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szukaj stron…"
+          }
+        }
+      }
+    },
+    "Searching for Bluetooth devices…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szukanie urządzeń Bluetooth…"
+          }
+        }
+      }
+    },
+    "Searching for other Bluetooth devices…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szukanie innych urządzeń Bluetooth…"
+          }
+        }
+      }
+    },
+    "Secure & lightweight": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpieczne i lekkie"
+          }
+        }
+      }
+    },
+    "Securely pair a watch running the Privio app.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpiecznie sparuj zegarek z aplikacją Privio."
+          }
+        }
+      }
+    },
+    "Security": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpieczeństwo"
+          }
+        }
+      }
+    },
+    "See Pro": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobacz Pro"
+          }
+        }
+      }
+    },
+    "Select a device to configure it": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz urządzenie, aby je skonfigurować"
+          }
+        }
+      }
+    },
+    "Select a note or create a new one.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz notatkę lub utwórz nową."
+          }
+        }
+      }
+    },
+    "Select a website to configure it": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz stronę, aby ją skonfigurować"
+          }
+        }
+      }
+    },
+    "Select an app to configure it": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz aplikację, aby ją skonfigurować"
+          }
+        }
+      }
+    },
+    "Sensitivity": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czułość"
+          }
+        }
+      }
+    },
+    "Set Up": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skonfiguruj"
+          }
+        }
+      }
+    },
+    "Set up": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skonfiguruj"
+          }
+        }
+      }
+    },
+    "Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia"
+          }
+        }
+      }
+    },
+    "Settings may have been modified outside Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia mogły zostać zmienione poza Privio"
+          }
+        }
+      }
+    },
+    "Settings…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia…"
+          }
+        }
+      }
+    },
+    "Shortcuts": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Skróty"
+          }
+        }
+      }
+    },
+    "Show": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż"
+          }
+        }
+      }
+    },
+    "Show %d more": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż jeszcze: %d"
+          }
+        }
+      }
+    },
+    "Show Recovery Key…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż klucz odzyskiwania…"
+          }
+        }
+      }
+    },
+    "Show apps": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż aplikacje"
+          }
+        }
+      }
+    },
+    "Show in Finder": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż w Finderze"
+          }
+        }
+      }
+    },
+    "Show less": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż mniej"
+          }
+        }
+      }
+    },
+    "Show menu bar icon": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pokaż ikonę w pasku menu"
+          }
+        }
+      }
+    },
+    "Signal unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sygnał niedostępny"
+          }
+        }
+      }
+    },
+    "Spotlight": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Latarka"
+          }
+        }
+      }
+    },
+    "Start Privio at login": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchamiaj Privio przy logowaniu"
+          }
+        }
+      }
+    },
+    "Starts at login": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchamia się przy logowaniu"
+          }
+        }
+      }
+    },
+    "Stored only inside the encrypted vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przechowywane wyłącznie w szyfrowanym sejfie"
+          }
+        }
+      }
+    },
+    "Style": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Styl"
+          }
+        }
+      }
+    },
+    "Support": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wsparcie"
+          }
+        }
+      }
+    },
+    "Supported browsers": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Obsługiwane przeglądarki"
+          }
+        }
+      }
+    },
+    "Switches to the macOS login window (requires your login password to be set).": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przełącza na okno logowania macOS (wymaga ustawionego hasła logowania)."
+          }
+        }
+      }
+    },
+    "System": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "System"
+          }
+        }
+      }
+    },
+    "Take a photo after failed authentication": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zrób zdjęcie po nieudanym uwierzytelnieniu"
+          }
+        }
+      }
+    },
+    "Take a photo after unsuccessful authentication": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zrób zdjęcie po nieudanym uwierzytelnieniu"
+          }
+        }
+      }
+    },
+    "Temporary Reveal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chwilowe odsłonięcie"
+          }
+        }
+      }
+    },
+    "Temporary add-on": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodatek tymczasowy"
+          }
+        }
+      }
+    },
+    "That app is already protected.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta aplikacja jest już chroniona."
+          }
+        }
+      }
+    },
+    "That license key isn’t valid.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten klucz licencji jest nieprawidłowy."
+          }
+        }
+      }
+    },
+    "The Chrome extension asks for authentication only on a real page navigation, never for address suggestions or background requests.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozszerzenie Chrome prosi o uwierzytelnienie tylko przy rzeczywistym otwarciu strony - nigdy dla podpowiedzi adresów ani żądań w tle."
+          }
+        }
+      }
+    },
+    "The camera could not be started.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się uruchomić kamery."
+          }
+        }
+      }
+    },
+    "The encrypted image is not mounted and its contents cannot be read.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zaszyfrowany obraz nie jest zamontowany i nie można odczytać jego zawartości."
+          }
+        }
+      }
+    },
+    "The recovery key is invalid.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz odzyskiwania jest nieprawidłowy."
+          }
+        }
+      }
+    },
+    "The temporary add-on is removed when Firefox restarts; a permanent store version is coming soon.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dodatek tymczasowy znika po restarcie Firefoksa; stała wersja ze sklepu będzie wkrótce."
+          }
+        }
+      }
+    },
+    "The timer starts after you leave this tab or Chrome loses focus. Closing the last tab locks the website immediately.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odliczanie rozpoczyna się po opuszczeniu karty lub utracie aktywności przez Chrome. Zamknięcie ostatniej karty natychmiast blokuje stronę."
+          }
+        }
+      }
+    },
+    "The timer starts after you leave this tab or the browser loses focus. Closing the last tab locks the website immediately.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odliczanie rozpoczyna się po opuszczeniu karty lub utracie aktywności przez przeglądarkę. Zamknięcie ostatniej karty natychmiast blokuje stronę."
+          }
+        }
+      }
+    },
+    "The vault is disabled. Its encrypted data and keys remain safely stored on this Mac.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf jest wyłączony. Jego zaszyfrowane dane i klucze pozostają bezpiecznie zapisane na tym Macu."
+          }
+        }
+      }
+    },
+    "The vault is still open because one of its files is in use. Close the file and try again.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf jest nadal otwarty, ponieważ jeden z jego plików jest używany. Zamknij plik i spróbuj ponownie."
+          }
+        }
+      }
+    },
+    "The vault remained mounted after the previous session. Close files stored in it and lock it now.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf pozostał zamontowany po poprzedniej sesji. Zamknij przechowywane w nim pliki i zablokuj go teraz."
+          }
+        }
+      }
+    },
+    "Theme": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Motyw"
+          }
+        }
+      }
+    },
+    "This app will quit on inactivity but never lock first.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ta aplikacja zamknie się po bezczynności, ale nigdy nie zablokuje się wcześniej."
+          }
+        }
+      }
+    },
+    "This device doesn't report signal strength, so Privio can't tell how far it is. It will only lock when the device disconnects - turned off or out of Bluetooth range - not by distance. For precise walk-away locking, pair a Privio Watch.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To urządzenie nie podaje siły sygnału, więc Privio nie wie, jak daleko jest. Zablokuje dopiero, gdy urządzenie się rozłączy - wyłączone lub poza zasięgiem Bluetooth - a nie po odległości. Do precyzyjnej blokady po odejściu sparuj zegarek z Privio."
+          }
+        }
+      }
+    },
+    "This device has no distance signal - the Mac locks when it disconnects (turned off or out of Bluetooth range).": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To urządzenie nie ma sygnału odległości - Mac zablokuje się, gdy się rozłączy (wyłączone lub poza zasięgiem Bluetooth)."
+          }
+        }
+      }
+    },
+    "This key is the only fallback if Keychain access is lost. Store it in a password manager or print it. Never keep the only copy inside this vault.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To jedyny sposób awaryjnego dostępu po utracie Pęku kluczy. Zapisz go w menedżerze haseł lub wydrukuj. Nigdy nie przechowuj jedynej kopii w tym sejfie."
+          }
+        }
+      }
+    },
+    "This permanently deletes locally stored failed-attempt photos.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To trwale usuwa lokalnie zapisane zdjęcia nieudanych prób."
+          }
+        }
+      }
+    },
+    "This shortcut is already used by Privio.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten skrót jest już używany przez Privio."
+          }
+        }
+      }
+    },
+    "This shortcut is already used by macOS or another app.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten skrót jest już używany przez macOS lub inną aplikację."
+          }
+        }
+      }
+    },
+    "This shortcut is reserved by macOS.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten skrót jest zastrzeżony przez macOS."
+          }
+        }
+      }
+    },
+    "This stops protection, removes Privio’s settings and license, and moves Privio to the Trash. It requires Touch ID. Your protected apps and their data are not affected.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "To zatrzymuje ochronę, usuwa ustawienia i licencję Privio oraz przenosi Privio do Kosza. Wymaga Touch ID. Twoje chronione aplikacje i ich dane pozostają nienaruszone."
+          }
+        }
+      }
+    },
+    "This watch does not provide a reliable paired signal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ten zegarek nie udostępnia wiarygodnego sygnału sparowania"
+          }
+        }
+      }
+    },
+    "Time after the last action in Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czas od ostatniej czynności w Privio"
+          }
+        }
+      }
+    },
+    "Time-based locking rules are planned for a future version.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reguły blokowania oparte na czasie są planowane w przyszłej wersji."
+          }
+        }
+      }
+    },
+    "Title": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tytuł"
+          }
+        }
+      }
+    },
+    "Toggle Privacy Curtain": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przełącz Zasłonę prywatności"
+          }
+        }
+      }
+    },
+    "Toggle persistent Reveal": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przełącz stałe odsłonięcie"
+          }
+        }
+      }
+    },
+    "Touch ID available": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch ID dostępny"
+          }
+        }
+      }
+    },
+    "Touch ID only": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tylko Touch ID"
+          }
+        }
+      }
+    },
+    "Touch ID or password": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch ID lub hasło"
+          }
+        }
+      }
+    },
+    "Touch ID or the Mac password is unavailable.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch ID ani hasło Maca nie są dostępne."
+          }
+        }
+      }
+    },
+    "Touch ID to unlock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch ID, aby odblokować"
+          }
+        }
+      }
+    },
+    "Touch ID unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Touch ID niedostępny"
+          }
+        }
+      }
+    },
+    "Trigger distance": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zasięg blokady"
+          }
+        }
+      }
+    },
+    "Turn it on in public places - a train, a café, a coworking space. Your protected apps stay usable; their windows are simply hidden until you reveal them. Configure once, toggle daily.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włącz w miejscach publicznych - w pociągu, kawiarni, coworkingu. Chronione aplikacje pozostają używalne; ich okna są po prostu ukryte, dopóki ich nie odsłonisz. Skonfiguruj raz, przełączaj codziennie."
+          }
+        }
+      }
+    },
+    "Turn on Bluetooth to find and monitor your trusted devices.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włącz Bluetooth, aby znaleźć i monitorować zaufane urządzenia."
+          }
+        }
+      }
+    },
+    "Turn on Developer mode (top-right corner).": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włącz tryb programisty (prawy górny róg)."
+          }
+        }
+      }
+    },
+    "Turning on sets a local web proxy for your Mac (asks for your admin password once). Turning off removes it.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Włączenie ustawia lokalne proxy WWW na Twoim Macu (jednorazowo prosi o hasło administratora). Wyłączenie je usuwa."
+          }
+        }
+      }
+    },
+    "Uninstall": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odinstaluj"
+          }
+        }
+      }
+    },
+    "Uninstall Privio?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odinstalować Privio?"
+          }
+        }
+      }
+    },
+    "Uninstall Privio…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odinstaluj Privio…"
+          }
+        }
+      }
+    },
+    "Unlock": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokuj"
+          }
+        }
+      }
+    },
+    "Unlock Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokuj Privio"
+          }
+        }
+      }
+    },
+    "Unlock Vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokuj sejf"
+          }
+        }
+      }
+    },
+    "Unlock uses your Mac password": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokowanie używa hasła Maca"
+          }
+        }
+      }
+    },
+    "Unlock with": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokuj przez"
+          }
+        }
+      }
+    },
+    "Unlock with Touch ID, Apple Watch, or your Mac account password. The encrypted volume is mounted only after successful authentication.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokuj za pomocą Touch ID, Apple Watch albo hasła konta Maca. Zaszyfrowany wolumin jest montowany dopiero po udanym uwierzytelnieniu."
+          }
+        }
+      }
+    },
+    "Unlocked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokowane"
+          }
+        }
+      }
+    },
+    "Unlocking…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odblokowywanie…"
+          }
+        }
+      }
+    },
+    "Unmounts the encrypted volume before sleep.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odmontowuje zaszyfrowany wolumin przed uśpieniem."
+          }
+        }
+      }
+    },
+    "Unmounts the encrypted volume immediately.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Natychmiast odmontowuje zaszyfrowany wolumin."
+          }
+        }
+      }
+    },
+    "Untitled": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bez tytułu"
+          }
+        }
+      }
+    },
+    "Use Mac Password": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Użyj hasła Maca"
+          }
+        }
+      }
+    },
+    "Use PrivioWear on a watch or PrivioMobile on a phone.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Użyj PrivioWear na zegarku lub PrivioMobile na telefonie."
+          }
+        }
+      }
+    },
+    "Use Recovery Key": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Użyj klucza odzyskiwania"
+          }
+        }
+      }
+    },
+    "Use Recovery Key…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Użyj klucza odzyskiwania…"
+          }
+        }
+      }
+    },
+    "Use a modifier and another key.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Użyj modyfikatora i drugiego klawisza."
+          }
+        }
+      }
+    },
+    "Use a name that makes this watch easy to recognize. Leave it blank to use the default name.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nadaj nazwę, po której łatwo rozpoznasz ten zegarek. Pozostaw pole puste, aby użyć nazwy domyślnej."
+          }
+        }
+      }
+    },
+    "Vault disabled": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf wyłączony"
+          }
+        }
+      }
+    },
+    "Vault locked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf zablokowany"
+          }
+        }
+      }
+    },
+    "Vault unlocked": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sejf odblokowany"
+          }
+        }
+      }
+    },
+    "Version %@": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wersja %@"
+          }
+        }
+      }
+    },
+    "View License & Terms": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobacz licencję i warunki"
+          }
+        }
+      }
+    },
+    "View Photos in Activity": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobacz zdjęcia w Aktywności"
+          }
+        }
+      }
+    },
+    "Wait before locking": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odczekaj przed blokadą"
+          }
+        }
+      }
+    },
+    "Wait for the current vault operation to finish before quitting Privio.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przed zamknięciem Privio poczekaj na zakończenie bieżącej operacji sejfu."
+          }
+        }
+      }
+    },
+    "Waiting for your permission…": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Czekam na Twoją zgodę…"
+          }
+        }
+      }
+    },
+    "Weaker than this counts as „away”. Lower = must be further to trigger.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Słabszy niż to liczy się jako „oddalenie”. Niżej = trzeba być dalej, by wyzwolić."
+          }
+        }
+      }
+    },
+    "Wear OS watches": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zegarki z Wear OS"
+          }
+        }
+      }
+    },
+    "Website": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Strona"
+          }
+        }
+      }
+    },
+    "Website blocking": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokowanie stron"
+          }
+        }
+      }
+    },
+    "Website blocking (Pro)": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokowanie stron (Pro)"
+          }
+        }
+      }
+    },
+    "Website blocking is a Pro feature": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Blokowanie stron to funkcja Pro"
+          }
+        }
+      }
+    },
+    "Website protection": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona stron"
+          }
+        }
+      }
+    },
+    "Website protection covers Chromium browsers (Chrome, Edge, Brave, Opera, Vivaldi, Arc) with the Privio extension, and Firefox with the separate Privio Firefox add-on. Safari is not covered yet - it ignores the system proxy and can bypass the block. Full, browser-independent protection is planned via a system network filter.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona stron obejmuje przeglądarki Chromium (Chrome, Edge, Brave, Opera, Vivaldi, Arc) z wtyczką Privio oraz Firefoksa z osobnym dodatkiem Privio dla Firefoksa. Safari nie jest jeszcze objęte - ignoruje systemowe proxy i potrafi ominąć blokadę. Pełna, niezależna od przeglądarki ochrona jest planowana przez systemowy filtr sieciowy."
+          }
+        }
+      }
+    },
+    "Website protection requires Privio Pro": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ochrona stron wymaga Privio Pro"
+          }
+        }
+      }
+    },
+    "When the device leaves": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gdy urządzenie się oddali"
+          }
+        }
+      }
+    },
+    "When you visit a blocked website in any browser, Privio asks for Touch ID before letting you in; after you unlock, refresh the page. Sites re-lock after inactivity. It works through a local web proxy that Privio turns on with a one-time admin password - no per-site prompts. Browsers using iCloud Private Relay, or apps that ignore the system proxy, may bypass this.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gdy wejdziesz na zablokowaną stronę w dowolnej przeglądarce, Privio poprosi o Touch ID, zanim Cię wpuści; po odblokowaniu odśwież stronę. Strony blokują się ponownie po bezczynności. Działa przez lokalne proxy WWW, które Privio włącza jednorazowym hasłem administratora - bez pytań przy każdej stronie. Przeglądarki z iCloud Private Relay lub aplikacje ignorujące systemowe proxy mogą to obejść."
+          }
+        }
+      }
+    },
+    "Which browsers are protected": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Które przeglądarki są chronione"
+          }
+        }
+      }
+    },
+    "Whole screen": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cały ekran"
+          }
+        }
+      }
+    },
+    "Whole screen, or only protected apps.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cały ekran albo tylko chronione aplikacje."
+          }
+        }
+      }
+    },
+    "Why Privio?": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dlaczego Privio?"
+          }
+        }
+      }
+    },
+    "Wide": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szeroka"
+          }
+        }
+      }
+    },
+    "Works in the background": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Działa w tle"
+          }
+        }
+      }
+    },
+    "You will receive a recovery key once. Keep it outside this Mac - without it, losing Keychain access makes the vault unrecoverable.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz odzyskiwania zobaczysz raz. Przechowuj go poza tym Makiem - bez niego utrata dostępu do Pęku kluczy uniemożliwi odzyskanie sejfu."
+          }
+        }
+      }
+    },
+    "Your Mac. Your privacy. Your rules.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twój Mac. Twoja prywatność. Twoje zasady."
+          }
+        }
+      }
+    },
+    "Your data stays on your Mac": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twoje dane zostają na Twoim Macu"
+          }
+        }
+      }
+    },
+    "Your device only ever triggers a lock - never an unlock. If it dies, breaks or is lost, you still sign in normally with Touch ID or your password, and Privio simply stops auto-locking. It can never lock you out.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twoje urządzenie zawsze tylko wyzwala blokadę - nigdy nie odblokowuje. Jeśli się rozładuje, zepsuje lub zgubi, nadal logujesz się normalnie przez Touch ID lub hasło, a Privio po prostu przestaje blokować automatycznie. Nie może Cię zablokować na stałe."
+          }
+        }
+      }
+    },
+    "Your devices from macOS Bluetooth settings.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Twoje urządzenia z ustawień Bluetooth macOS."
+          }
+        }
+      }
+    },
+    "Your recovery key can open the vault if the protected Keychain entry is lost. Anyone who has this key can decrypt the vault.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Klucz odzyskiwania otworzy sejf po utracie chronionego wpisu Pęku kluczy. Każdy, kto ma ten klucz, może odszyfrować sejf."
+          }
+        }
+      }
+    },
+    "macOS can’t ask again after access was denied. Open Camera settings and enable Privio, then turn this option on again.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "macOS nie może ponownie zapytać po odrzuceniu dostępu. Otwórz ustawienia kamery, włącz Privio, a następnie ponownie włącz tę opcję."
+          }
+        }
+      }
+    },
+    "macOS notification previews may still reveal content from a protected app. Turn them off in System Settings › Notifications › Show Previews.": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Podglądy powiadomień macOS mogą wciąż ujawniać treść z chronionej aplikacji. Wyłącz je w Ustawieniach systemowych › Powiadomienia › Pokazuj podglądy."
+          }
+        }
+      }
+    },
+    "protected apps, sites and the vault": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "chronione apki, strony i sejf"
+          }
+        }
+      }
+    },
+    "the screen": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ekran"
+          }
+        }
+      }
+    },
+    "← Locks after a longer distance": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "← Blokuje po dłuższym oddaleniu"
+          }
+        }
+      }
+    },
+    "← Locks after a shorter distance": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "← Blokuje po krótszym oddaleniu"
+          }
+        }
+      }
+    },
+    "⌥⌘ reveal · menu off": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "⌥⌘ odsłoń · menu wyłącz"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

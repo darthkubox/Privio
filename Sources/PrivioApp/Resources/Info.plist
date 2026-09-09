@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleName</key>
+	<string>Privio</string>
+	<key>CFBundleDisplayName</key>
+	<string>Privio</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.privio.Privio.vault</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>privio</string>
+			</array>
+		</dict>
+	</array>
+	<key>LSMinimumSystemVersion</key>
+	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+	<key>LSMultipleInstancesProhibited</key>
+	<true/>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>Privacy. Locked by you.</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>Privio can take a local photo after a failed unlock attempt when you explicitly enable this feature.</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Privio uses Bluetooth to see whether a trusted paired device (like your phone or watch) is near, so it can lock your Mac when you walk away. It never unlocks your Mac and sends nothing off this device.</string>
+	<key>SUFeedURL</key>
+	<string>$(PRIVIO_UPDATE_FEED_URL)</string>
+	<key>SUPublicEDKey</key>
+	<string>wFFOTC8vYL7A8E76VlVC3g67yj+qQzF0YtDO3/l97+s=</string>
+	<key>SUEnableAutomaticChecks</key>
+	<false/>
+	<key>SUAllowsAutomaticUpdates</key>
+	<true/>
+	<key>SUEnableSystemProfiling</key>
+	<false/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<!-- Aplikacja pomocnicza (accessory): bez ikony w Docku, żyje w menu bar.
+	     Dzięki temu aktywacja Privio przy uwierzytelnianiu nie pokazuje okna
+	     konfiguracji - widać tylko systemowy prompt Touch ID. -->
+	<key>LSUIElement</key>
+	<true/>
+</dict>
+</plist>

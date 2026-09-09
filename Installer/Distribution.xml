@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<installer-gui-script minSpecVersion="2">
+    <title>Privio</title>
+    <organization>com.privio</organization>
+    <domains enable_localSystem="true" enable_currentUserHome="false" enable_anywhere="false"/>
+    <options customize="never" require-scripts="false" rootVolumeOnly="true"/>
+    <welcome file="Welcome.rtf" mime-type="text/rtf"/>
+    <license file="License.rtf" mime-type="text/rtf"/>
+    <background file="background.png" alignment="bottomleft" scaling="none"/>
+    <background-darkAqua file="background-dark.png" alignment="bottomleft" scaling="none"/>
+    <choices-outline>
+        <line choice="default">
+            <line choice="com.privio.Privio.pkg"/>
+        </line>
+    </choices-outline>
+    <choice id="default"/>
+    <choice id="com.privio.Privio.pkg" visible="false">
+        <pkg-ref id="com.privio.Privio.pkg"/>
+    </choice>
+    <pkg-ref id="com.privio.Privio.pkg" version="__PRIVIO_VERSION__">Privio-component.pkg</pkg-ref>
+</installer-gui-script>

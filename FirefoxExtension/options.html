@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privio - Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main>
+    <header>
+      <img src="icons/icon128.png" alt="" width="48" height="48">
+      <div>
+        <h1 data-i18n="options_title">Ustawienia rozszerzenia Privio</h1>
+        <p data-i18n="options_subtitle">Język, status połączenia i skróty do aplikacji.</p>
+      </div>
+      <div id="connection" class="pill waiting"><i></i><span data-i18n="conn_connecting">Łączenie…</span></div>
+    </header>
+
+    <section class="card">
+      <h2 data-i18n="lang_label">Język rozszerzenia</h2>
+      <div class="segmented" id="langGroup" role="group">
+        <button data-lang="auto" data-i18n="lang_auto">Automatycznie (jak Privio)</button>
+        <button data-lang="pl" data-i18n="lang_pl">Polski</button>
+        <button data-lang="en" data-i18n="lang_en">English</button>
+      </div>
+      <p class="hint" data-i18n="lang_hint">„Automatycznie" podąża za językiem aplikacji Privio.</p>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="section_status">Połączenie i ochrona</h2>
+      <div class="rows">
+        <div class="line"><span data-i18n="status_app">Aplikacja Privio</span><strong id="appState">-</strong></div>
+        <div class="line"><span data-i18n="status_protection">Ochrona stron</span><strong id="protectionState">-</strong></div>
+        <div class="line"><span data-i18n="app_version">Wersja aplikacji</span><strong id="appVersion">-</strong></div>
+        <div class="line"><span data-i18n="ext_version">Wersja rozszerzenia</span><strong id="extVersion">-</strong></div>
+        <div class="line"><span data-i18n="last_sync">Ostatnia synchronizacja</span><strong id="lastSync">-</strong></div>
+      </div>
+      <button id="openPrivio" class="primary" data-i18n="open_privio_full">Otwórz Privio na Macu</button>
+    </section>
+
+    <section class="card">
+      <h2 data-i18n="section_domains">Chronione domeny</h2>
+      <div class="group">
+        <span class="grouplabel" data-i18n="protected_list">Chronione</span>
+        <div id="protectedDomains" class="chips"></div>
+      </div>
+      <div class="group">
+        <span class="grouplabel" data-i18n="blocked_list">Zablokowane teraz</span>
+        <div id="blockedDomains" class="chips"></div>
+      </div>
+      <p id="domainsEmpty" class="hint" data-i18n="domains_empty" hidden>Brak skonfigurowanych domen.</p>
+    </section>
+
+    <div id="toast" class="toast" hidden></div>
+  </main>
+  <script src="compat.js"></script>
+  <script src="i18n.js"></script>
+  <script src="env.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
