@@ -11,10 +11,32 @@ import PrivioCore
 /// developmentu - w normalnym uruchomieniu nieaktywny.
 @MainActor
 final class SnapshotAppDelegate: NSObject, NSApplicationDelegate {
-    /// Wszystkie drogi zakończenia aplikacji przechodzą przez bezpieczne
-    /// odmontowanie sejfu. `terminateLater` pozwala dokończyć operację asynchroniczną.
+    /// All graceful quit routes (including Dock, Cmd-Q and external quit events)
+    /// authenticate before vault cleanup and before permitting watchdog shutdown.
+    static var terminationAuthorizationHandler: (@MainActor () async -> Bool)?
     static var vaultTerminationHandler: (@MainActor () async -> Bool)?
+    static var protectionStartupHandler: (@MainActor () -> Void)?
     static var suppressMainWindowForVaultLink = false
+    private static let termination = TerminationCoordinator()
+    private static var approvedTerminationAction: (@MainActor () -> Void)?
+
+    static func requestTermination(
+        authorize: (@MainActor () async -> Bool)? = nil,
+        afterVault: @escaping @MainActor () async -> Bool = { true },
+        onWillTerminate: (@MainActor () -> Void)? = nil
+    ) {
+        termination.request(
+            authorize: { await (authorize ?? Self.terminationAuthorizationHandler)?() ?? false },
+            prepare: {
+                guard await Self.vaultTerminationHandler?() == true else { return false }
+                return await afterVault()
+            },
+            terminate: {
+                Self.approvedTerminationAction = onWillTerminate
+                defer { Self.approvedTerminationAction = nil }
+                NSApp.terminate(nil)
+            })
+    }
 
     /// Zamknięcie okna ustawień NIE zamyka Privio - zostaje w pasku menu (locker
     /// działa dalej). Ikona w Docku znika (accessory) po zamknięciu okna.
@@ -49,20 +71,22 @@ final class SnapshotAppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func applicationShouldTerminate(_ sender: NSApplication) -> NSApplication.TerminateReply {
-        // Otwarty arkusz (sheet) trzyma modalną sesję na oknie, która potrafi wstrzymać
-        // zamknięcie inicjowane przez Sparkle - aktualizacja „coś robi", ale apka się nie
-        // restartuje i nie instaluje. Zamykamy wszystkie arkusze, zanim oddamy sterowanie
-        // ścieżce terminacji. (Panel aktualizacji Sparkle to osobne okno, nie arkusz - nie
-        // dotyczy go to.)
+        if Self.termination.isTerminationAuthorized {
+            return RecoveryController.shared.prepareForTermination() ? .terminateNow : .terminateCancel
+        }
+        // Coalesce repeated Dock/Cmd-Q requests while the same prompt is open.
+        guard !Self.termination.isPreparing else { return .terminateCancel }
         for window in sender.windows {
             if let sheet = window.attachedSheet { window.endSheet(sheet) }
         }
-        guard let handler = Self.vaultTerminationHandler else { return .terminateNow }
-        Task { @MainActor in
-            let safeToQuit = await handler()
-            sender.reply(toApplicationShouldTerminate: safeToQuit)
-        }
-        return .terminateLater
+        Self.requestTermination()
+        // Keep the normal event loop alive for LocalAuthentication. The authorized
+        // retry re-enters this delegate synchronously after authentication succeeds.
+        return .terminateCancel
+    }
+
+    func applicationWillTerminate(_ notification: Notification) {
+        Self.approvedTerminationAction?()
     }
 
     /// Znajduje i pokazuje główne okno ustawień przy starcie (kilka prób, bo SwiftUI
@@ -106,6 +130,8 @@ final class SnapshotAppDelegate: NSObject, NSApplicationDelegate {
             exit(0)
         }
         guard let path = env["PRIVIO_SNAPSHOT"] else {
+            Self.protectionStartupHandler?()
+            RecoveryController.shared.start()
             // Motyw jasny/ciemny wg wyboru użytkownika (Ustawienia → Wygląd).
             AppTheme.apply()
             // Daj systemowi chwilę na dostarczenie URL `privio://vault`. Skrót

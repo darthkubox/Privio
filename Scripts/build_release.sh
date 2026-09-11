@@ -6,8 +6,8 @@ output_dir="$repo_dir/.build/release"
 archive_path="$output_dir/Privio.xcarchive"
 app_path="$archive_path/Products/Applications/Privio.app"
 dmg_path="$output_dir/Privio.dmg"
-version=${PRIVIO_VERSION:-0.1.0}
-build_number=${PRIVIO_BUILD:-1}
+version=${PRIVIO_VERSION:-0.1.4}
+build_number=${PRIVIO_BUILD:-5}
 
 if [[ -z "${TEAM_ID:-}" ]]; then
   print -u2 "Missing TEAM_ID (Apple Developer Team ID)."
@@ -66,6 +66,8 @@ if [[ -d "$sparkle" ]]; then
   resign "$sparkle/Versions/B/Sparkle"
   resign "$sparkle"
 fi
+# The independently launched recovery tool must also carry a timestamped signature.
+resign "$app_path/Contents/MacOS/PrivioWatchdog"
 # Re-seal the host app last; nested changes invalidate its outer signature.
 resign "$app_path"
 

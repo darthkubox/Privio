@@ -55,9 +55,13 @@ enum AppLanguage: String, CaseIterable, Identifiable {
     /// Zapisuje wybór i restartuje Privio, żeby język zastosował się w całej aplikacji.
     @MainActor static func select(_ lang: AppLanguage) {
         guard lang != current else { return }
-        UserDefaults.standard.set(lang.rawValue, forKey: defaultsKey)
-        applyStartupOverride()
-        relaunch()
+        // Do not spawn a second enforcement engine before the existing process
+        // has authenticated its exit and safely closed the vault.
+        SnapshotAppDelegate.requestTermination(onWillTerminate: {
+            UserDefaults.standard.set(lang.rawValue, forKey: defaultsKey)
+            applyStartupOverride()
+            relaunch()
+        })
     }
 
     @MainActor private static func relaunch() {
@@ -65,6 +69,5 @@ enum AppLanguage: String, CaseIterable, Identifiable {
         proc.executableURL = URL(fileURLWithPath: "/usr/bin/open")
         proc.arguments = ["-n", Bundle.main.bundlePath]
         try? proc.run()
-        NSApp.terminate(nil)
     }
 }

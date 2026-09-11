@@ -36,6 +36,26 @@ struct SecurityStatusCard: View {
                      text: "Configuration integrity check failed",
                      detail: "Settings may have been modified outside Privio")
             }
+            Divider().overlay(Color.privioSeparator)
+            switch RecoveryController.shared.status {
+            case .watching:
+                line(color: .privioUnlocked, symbol: "checkmark.shield.fill",
+                     text: "Automatic recovery is ready",
+                     detail: "Privio restarts after an unexpected exit; protection pauses briefly")
+            case .waiting:
+                line(color: .privioBright, symbol: "exclamationmark.triangle.fill",
+                     text: "Waiting for automatic recovery",
+                     detail: "The background service has not confirmed it is watching Privio")
+            case .needsApproval:
+                line(color: .privioBright, symbol: "exclamationmark.triangle.fill",
+                     text: "Automatic recovery needs permission",
+                     detail: "Allow Privio to run in the background in System Settings")
+                Button("Open Login Items settings") { RecoveryController.shared.openSystemSettings() }
+            case .unavailable:
+                line(color: .privioBright, symbol: "exclamationmark.triangle.fill",
+                     text: "Automatic recovery is unavailable",
+                     detail: "Install Privio in Applications and allow its background service")
+            }
         }
     }
 

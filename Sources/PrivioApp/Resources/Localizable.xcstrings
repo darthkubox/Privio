@@ -1,6 +1,116 @@
 {
   "sourceLanguage": "en",
   "strings": {
+    "Automatic recovery is ready": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatyczne wznawianie jest gotowe"
+          }
+        }
+      }
+    },
+    "Privio restarts after an unexpected exit; protection pauses briefly": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Privio uruchomi się ponownie po nagłym zamknięciu; ochrona na chwilę ustanie"
+          }
+        }
+      }
+    },
+    "Waiting for automatic recovery": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oczekiwanie na automatyczne wznawianie"
+          }
+        }
+      }
+    },
+    "The background service has not confirmed it is watching Privio": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Usługa w tle nie potwierdziła jeszcze nadzorowania Privio"
+          }
+        }
+      }
+    },
+    "Automatic recovery needs permission": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatyczne wznawianie wymaga zgody"
+          }
+        }
+      }
+    },
+    "Allow Privio to run in the background in System Settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zezwól Privio na działanie w tle w Ustawieniach systemowych"
+          }
+        }
+      }
+    },
+    "Open Login Items settings": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Otwórz ustawienia elementów logowania"
+          }
+        }
+      }
+    },
+    "Automatic recovery is unavailable": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Automatyczne wznawianie jest niedostępne"
+          }
+        }
+      }
+    },
+    "Install Privio in Applications and allow its background service": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zainstaluj Privio w Aplikacjach i zezwól na działanie jego usługi w tle"
+          }
+        }
+      }
+    },
+    "Privio could not finish quitting": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się zakończyć Privio"
+          }
+        }
+      }
+    },
+    "Privio could not remove its background service": {
+      "localizations": {
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie udało się usunąć usługi Privio działającej w tle"
+          }
+        }
+      }
+    },
     "%@ is Locked": {
       "localizations": {
         "pl": {

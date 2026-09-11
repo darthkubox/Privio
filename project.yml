@@ -17,8 +17,8 @@ settings:
     CODE_SIGN_STYLE: Manual
     CODE_SIGN_IDENTITY: "-"
     DEVELOPMENT_TEAM: ""
-    MARKETING_VERSION: "0.1.0"
-    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "0.1.4"
+    CURRENT_PROJECT_VERSION: "5"
     ENABLE_HARDENED_RUNTIME: YES
     SWIFT_STRICT_CONCURRENCY: minimal
   configs:
@@ -33,11 +33,24 @@ targets:
     platform: macOS
     sources:
       - Sources/PrivioCore
+      - Sources/PrivioRecoverySupport
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.privio.PrivioCore
         GENERATE_INFOPLIST_FILE: YES
         DEFINES_MODULE: YES
+
+  PrivioWatchdog:
+    type: tool
+    platform: macOS
+    sources:
+      - path: Sources/PrivioWatchdog
+        excludes: ["*.plist"]
+      - Sources/PrivioRecoverySupport
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.privio.Privio.Watchdog
+        SKIP_INSTALL: YES
 
   Privio:
     type: application
@@ -71,9 +84,23 @@ targets:
         type: folder
         buildPhase: resources
     dependencies:
+      - target: PrivioWatchdog
+        embed: false
       - target: PrivioCore
         embed: true
       - package: Sparkle
+    postBuildScripts:
+      - name: Embed recovery watchdog
+        script: |
+          mkdir -p "${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Library/LaunchAgents"
+          cp "${BUILT_PRODUCTS_DIR}/PrivioWatchdog" "${TARGET_BUILD_DIR}/${EXECUTABLE_FOLDER_PATH}/PrivioWatchdog"
+          cp "${SRCROOT}/Sources/PrivioWatchdog/com.privio.Privio.Watchdog.plist" "${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Library/LaunchAgents/"
+        inputFiles:
+          - "$(BUILT_PRODUCTS_DIR)/PrivioWatchdog"
+          - "$(SRCROOT)/Sources/PrivioWatchdog/com.privio.Privio.Watchdog.plist"
+        outputFiles:
+          - "$(TARGET_BUILD_DIR)/$(EXECUTABLE_FOLDER_PATH)/PrivioWatchdog"
+          - "$(TARGET_BUILD_DIR)/$(CONTENTS_FOLDER_PATH)/Library/LaunchAgents/com.privio.Privio.Watchdog.plist"
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.privio.Privio

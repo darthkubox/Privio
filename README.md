@@ -17,7 +17,10 @@ screen lock / sleep, and can auto‑quit apps after a period of inactivity.
 - **Inactivity** locking and optional **auto‑quit**
 - Lock after **screen lock / sleep / user switch**
 - Lives in the **menu bar** (accessory app); Dock icon only while Settings are open
-- Disabling protection or quitting Privio requires authentication
+- Disabling protection or quitting Privio requires authentication, including Dock Quit,
+  Command-Q and external graceful quit requests. Cancelling authentication leaves protection running.
+- A separate background watchdog restarts the installed app after Force Quit or a crash
+  (requires permission to run in the background; protection pauses during recovery)
 - Optional failed-authentication photos: off by default, local-only, newest 20 retained
 - **Privacy Curtain** with spotlight, privacy-filter and blur modes
 - **Private Vault**: local APFS/AES‑256 storage for files and encrypted notes, unlocked with macOS
@@ -44,22 +47,24 @@ Run the unit tests:
 xcodebuild -project Privio.xcodeproj -scheme PrivioCoreTests -destination 'platform=macOS' test
 ```
 
-For a small, informed test group before Developer ID is available, see
-[Docs/BETA_TESTING.md](Docs/BETA_TESTING.md). Stable releases use the signed and notarized process in
-[Docs/RELEASE.md](Docs/RELEASE.md).
-
 ## Install & updates
 
 **Install.** Privio ships as a macOS installer package. Open `Privio-<version>.pkg`, accept the EULA
 (Polish/English), and authorize with your administrator password. It installs into `/Applications`
 with system ownership, so removing it also requires an administrator. Requires macOS 14+. Prebuilt
-packages are attached to [GitHub Releases](../../releases) (currently private, unsigned dev builds -
-a public build needs Developer ID signing and notarization). To build one yourself:
+packages are attached to [GitHub Releases](https://github.com/darthkubox/Privio/releases).
+Official beta packages are signed with Developer ID and notarized by Apple, and support Apple
+Silicon and Intel. To build a local installer yourself:
 
 ```bash
 Scripts/build_admin_installer.sh                                    # unsigned .pkg → .build/admin-installer/
 PRIVIO_VERSION=0.2.0 PRIVIO_BUILD=2 Scripts/build_admin_installer.sh  # bump for each build
 ```
+
+For an official package, `Scripts/build_release_pkg.sh` requires `TEAM_ID` and `NOTARY_PROFILE`
+plus the Developer ID Application and Installer certificates in Keychain. It builds the app,
+includes the localized EULA, signs and notarizes the installer, staples the ticket and checks
+Gatekeeper. `Scripts/make_appcast.sh` signs that package for Sparkle and generates the feed.
 
 **In-app updates.** Privio uses [Sparkle 2](https://sparkle-project.org). Choose **Check for
 Updates…** in Settings or the menu bar. Automatic checks and system profiling are off by default;
@@ -68,7 +73,8 @@ with an EdDSA signature before it installs - the app embeds only the public key 
 the private signing key stays in the developer's login Keychain (never committed).
 
 **Testing updates locally.** Debug builds read the appcast from `http://127.0.0.1:8080/appcast.xml`;
-Release builds read the GitHub HTTPS feed. To publish a newer local build and exercise the update
+Release builds read `https://priviolock.com/updates/appcast.xml`, with packages hosted on GitHub
+Releases. To publish a newer local build and exercise the update
 button end-to-end:
 
 ```bash
@@ -78,17 +84,29 @@ Scripts/serve_local_updates.sh              # serve it on 127.0.0.1:8080
 
 You can also just double-click **`Start Privio Update Server.command`** (it stages an update if none
 exists yet, then serves it). Keep the server running, launch an installed older build, and choose
-**Check for Updates…**. The full signed-and-notarized release process is in
-[Docs/RELEASE.md](Docs/RELEASE.md); for a small pre-Developer ID test group see
-[Docs/BETA_TESTING.md](Docs/BETA_TESTING.md).
+**Check for Updates…**.
 
 ## Architecture
 
-Two targets:
+Three targets:
 
 - **PrivioCore** - a framework with all domain logic, persistence, security and enforcement.
   UI‑agnostic and unit‑tested.
 - **Privio** - the SwiftUI/AppKit app; UI plus dependency wiring in `PrivioApp.init`.
+- **PrivioWatchdog** - an independent, per-user `SMAppService` LaunchAgent that watches
+  `/Applications/Privio.app` and reopens that exact bundle after an unexpected exit. It does
+  not unlock anything. Authenticated quit and graceful update termination remain closed;
+  uninstall unregisters the service. A new manual launch rearms recovery. The helper waits
+  when Privio has not been opened, so it does not enable the separate login-autostart option.
+
+Settings reports recovery as ready only after a fresh heartbeat identifies the current app
+process. If macOS requests background permission, use the Login Items settings link shown there.
+Development and snapshot builds do not register a watchdog. To smoke-test a Debug watchdog
+against a disposable app and temporary launchd job (without touching installed Privio):
+
+```bash
+python3 Scripts/test_recovery_watchdog.py <Debug-products-directory>/PrivioWatchdog
+```
 
 UI and enforcement are separated by a single seam - the `EnforcementControlling` protocol - with
 `Codable`/`Sendable` messages, so the in‑process enforcement engine (`InProcessEnforcementService`,
@@ -106,6 +124,10 @@ Privio protects private apps when someone briefly has access to your already‑u
 - macOS has **no public API to intercept an app launch**, so Privio can only *react* (hide on
   activation). A brief content flash before hiding is possible and is minimized, not eliminated.
 - A `kill` from Terminal on an unlocked Mac cannot be prevented.
+- Recovery is best effort, with a brief protection gap and bounded retry frequency. It is not
+  continuous independent enforcement. Disabling/killing the helper as well can defeat recovery;
+  the current account can also modify its local coordination files. A mounted vault is safely
+  detached on startup where possible; open files can still prevent detachment.
 - Privio is intentionally **not sandboxed** (distributed outside the Mac App Store) so it can hide
   and quit other apps. It uses only public Apple APIs - no private APIs, no Accessibility or Screen
   Recording permissions.

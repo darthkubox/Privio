@@ -578,8 +578,8 @@ final class AppModel {
     /// Zamknięcie Privio - jeśli ochrona jest aktywna, wymaga uwierzytelnienia
     /// (inaczej dałoby się po cichu wyłączyć ochronę zamykając apkę - sekcja 18).
     func requestQuit() {
-        guard state.protectionActive else { NSApp.terminate(nil); return }
-        Task { if await authorize(.quitPrivio) { NSApp.terminate(nil) } }
+        // The app delegate also handles Dock/Cmd-Q/external quit requests.
+        NSApp.terminate(nil)
     }
 
     /// Oficjalny przepływ odinstalowania (sekcja 11): auth → wyrejestrowanie
@@ -587,18 +587,18 @@ final class AppModel {
     /// przeniesienie .app do Kosza → zamknięcie. NIE usuwa danych innych apek i
     /// NIE utrudnia właścicielowi usunięcia.
     func uninstall() {
-        Task {
-            guard await authorize(.uninstall) else { return }
-            loginItem.setEnabled(false)
-            licenseManager.deactivate()
-            await service.clearWebsiteBlocks()   // zdejmij blok /etc/hosts (inaczej strony zostają zablokowane)
+        SnapshotAppDelegate.requestTermination(authorize: { await self.authorize(.uninstall) }, afterVault: {
+            guard RecoveryController.shared.uninstall() else { return false }
+            self.loginItem.setEnabled(false)
+            self.licenseManager.deactivate()
+            await self.service.clearWebsiteBlocks()   // zdejmij blok /etc/hosts (inaczej strony zostają zablokowane)
             let dir = FileManager.default
                 .urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
                 .appendingPathComponent("Privio", isDirectory: true)
             try? FileManager.default.removeItem(at: dir)
             _ = try? await NSWorkspace.shared.recycle([Bundle.main.bundleURL])
-            NSApp.terminate(nil)
-        }
+            return true
+        })
     }
 
     /// Włączenie autostartu - od ręki; WYŁĄCZENIE wymaga autoryzacji (sekcja 10).

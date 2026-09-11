@@ -70,7 +70,18 @@ struct PrivioApp: App {
         _model = State(initialValue: model)
         _vault = State(initialValue: vault)
         _proximity = State(initialValue: proximity)
+        SnapshotAppDelegate.terminationAuthorizationHandler = {
+            guard model.state.protectionActive else { return true }
+            return await model.authorize(.quitPrivio)
+        }
         SnapshotAppDelegate.vaultTerminationHandler = { await vault.prepareForTermination() }
+        SnapshotAppDelegate.protectionStartupHandler = {
+            model.startObserving()
+            proximity.start()
+            // Recovery must unmount a previously open vault even if its tab and
+            // the menu-bar popover have never been opened in this process.
+            Task { await vault.start() }
+        }
     }
 
     var body: some Scene {

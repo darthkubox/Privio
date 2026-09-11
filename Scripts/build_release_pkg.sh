@@ -12,15 +12,15 @@ set -euo pipefail
 #
 # Requires: TEAM_ID (Apple Developer Team ID) and NOTARY_PROFILE (notarytool keychain profile).
 # Usage:
-#   PRIVIO_VERSION=0.1.0 PRIVIO_BUILD=1 TEAM_ID=37VNW38X5U NOTARY_PROFILE=privio-notary \
+#   PRIVIO_VERSION=0.1.4 PRIVIO_BUILD=5 TEAM_ID=37VNW38X5U NOTARY_PROFILE=privio-notary \
 #     Scripts/build_release_pkg.sh
 
 repo_dir=${0:A:h:h}
 output_dir="$repo_dir/.build/release-pkg"
 archive_path="$output_dir/Privio.xcarchive"
 app_path="$archive_path/Products/Applications/Privio.app"
-version=${PRIVIO_VERSION:-0.1.0}
-build_number=${PRIVIO_BUILD:-1}
+version=${PRIVIO_VERSION:-0.1.4}
+build_number=${PRIVIO_BUILD:-5}
 pkg_path="$output_dir/Privio-$version.pkg"
 component_path="$output_dir/Privio-component.pkg"
 resources_dir="$output_dir/InstallerResources"
@@ -90,6 +90,8 @@ if [[ -d "$sparkle" ]]; then
   resign "$sparkle/Versions/B/Sparkle"
   resign "$sparkle"
 fi
+# The independently launched recovery tool must also carry a timestamped signature.
+resign "$app_path/Contents/MacOS/PrivioWatchdog"
 # Re-seal the host app last; nested changes invalidate its outer signature.
 resign "$app_path"
 codesign --verify --deep --strict --verbose=2 "$app_path"
