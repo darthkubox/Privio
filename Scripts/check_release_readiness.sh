@@ -24,7 +24,7 @@ for kind in Application Installer; do
   fi
 done
 
-if rg -n '\[\.\.\.\]|to be filled|do uzupełnienia|Draft pending legal review|Draft do przeglądu prawnego' \
+if grep -nE '\[\.\.\.\]|to be filled|do uzupełnienia|Draft pending legal review|Draft do przeglądu prawnego' \
     EULA.md EULA.en.md LICENSE.md >/dev/null; then
   print 'BLOCKED: legal documents still contain draft notices or placeholders.'
   issues=$((issues + 1))
