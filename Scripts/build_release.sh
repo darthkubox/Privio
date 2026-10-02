@@ -22,6 +22,10 @@ fi
 cd "$repo_dir"
 mkdir -p "$output_dir"
 
+# G2 Sub-CA identity only, by SHA-1 (see Scripts/developer_id.sh).
+source "$repo_dir/Scripts/developer_id.sh"
+signing_identity=$(developer_id_identity Application "$TEAM_ID") || exit 5
+
 xcodegen generate
 
 xcodebuild \
@@ -35,21 +39,13 @@ xcodebuild \
   CURRENT_PROJECT_VERSION="$build_number" \
   DEVELOPMENT_TEAM="$TEAM_ID" \
   CODE_SIGN_STYLE=Manual \
-  CODE_SIGN_IDENTITY='Developer ID Application'
+  CODE_SIGN_IDENTITY="$signing_identity"
 
 # Sparkle ships its helper binaries (Autoupdate, Updater.app, XPC services) ad-hoc
 # signed, and `xcodebuild archive` does not deep-sign them with our Developer ID.
 # Notarization rejects any nested binary lacking a Developer ID signature + secure
 # timestamp, so re-sign them inside-out, preserving Sparkle's own entitlements, then
-# re-seal the host app. Signing identity is resolved from the Developer ID Application
-# certificate for this team.
-signing_identity=$(security find-identity -v -p codesigning \
-  | grep "Developer ID Application" | grep "$TEAM_ID" \
-  | grep -oE '[0-9A-F]{40}' | head -1)
-if [[ -z "$signing_identity" ]]; then
-  print -u2 "No 'Developer ID Application' identity for team $TEAM_ID in the keychain."
-  exit 5
-fi
+# re-seal the host app with the identity resolved above.
 
 resign() {  # <path>
   codesign --force --options runtime --timestamp \

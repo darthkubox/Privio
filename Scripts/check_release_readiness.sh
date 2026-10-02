@@ -15,10 +15,14 @@ check_command() {
 check_command xcodegen
 check_command xcodebuild
 
-if ! security find-identity -p codesigning -v 2>/dev/null | grep -q 'Developer ID Application'; then
-  print 'BLOCKED: Developer ID Application certificate is not installed.'
-  issues=$((issues + 1))
-fi
+# Both identities must come from the G2 Sub-CA; the previous one dies on 2027-02-01.
+source "$repo_dir/Scripts/developer_id.sh"
+for kind in Application Installer; do
+  if ! developer_id_identity $kind "${TEAM_ID:-}" >/dev/null; then
+    print "BLOCKED: no G2 Developer ID $kind certificate installed."
+    issues=$((issues + 1))
+  fi
+done
 
 if rg -n '\[\.\.\.\]|to be filled|do uzupełnienia|Draft pending legal review|Draft do przeglądu prawnego' \
     EULA.md EULA.en.md LICENSE.md >/dev/null; then

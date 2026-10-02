@@ -42,6 +42,12 @@ fi
 cd "$repo_dir"
 mkdir -p "$output_dir"
 
+# Resolve both Developer ID identities up front (G2 Sub-CA only, by SHA-1) so a missing
+# or outdated certificate fails before the archive, not after it.
+source "$repo_dir/Scripts/developer_id.sh"
+signing_identity=$(developer_id_identity Application "$TEAM_ID") || exit 5
+installer_identity=$(developer_id_identity Installer "$TEAM_ID") || exit 7
+
 xcodegen generate
 
 # Never override PRIVIO_UPDATE_FEED_URL here: the Release config already bakes the
@@ -60,20 +66,13 @@ xcodebuild \
   CURRENT_PROJECT_VERSION="$build_number" \
   DEVELOPMENT_TEAM="$TEAM_ID" \
   CODE_SIGN_STYLE=Manual \
-  CODE_SIGN_IDENTITY='Developer ID Application'
+  CODE_SIGN_IDENTITY="$signing_identity"
 
 # Sparkle ships its helper binaries (Autoupdate, Updater.app, XPC services) ad-hoc
 # signed, and `xcodebuild archive` does not deep-sign them with our Developer ID.
 # Notarization rejects any nested binary lacking a Developer ID signature + secure
 # timestamp, so re-sign them inside-out, preserving Sparkle's own entitlements, then
 # re-seal the host app. (Identical to build_release.sh.)
-signing_identity=$(security find-identity -v -p codesigning \
-  | grep "Developer ID Application" | grep "$TEAM_ID" \
-  | grep -oE '[0-9A-F]{40}' | head -1)
-if [[ -z "$signing_identity" ]]; then
-  print -u2 "No 'Developer ID Application' identity for team $TEAM_ID in the keychain."
-  exit 5
-fi
 
 resign() {  # <path>
   codesign --force --options runtime --timestamp \
@@ -104,16 +103,6 @@ if [[ "$baked_feed" != "$production_feed" ]]; then
   print -u2 "Feed mismatch: baked '${baked_feed:-<none>}' but expected '$production_feed'."
   print -u2 "Refusing to ship a public package with a non-production feed."
   exit 6
-fi
-
-# Resolve the Developer ID Installer identity (installer certs are not under the
-# codesigning policy, so query the default identity list).
-installer_identity=$(security find-identity -v \
-  | grep "Developer ID Installer" | grep "$TEAM_ID" \
-  | grep -oE '[0-9A-F]{40}' | head -1)
-if [[ -z "$installer_identity" ]]; then
-  print -u2 "No 'Developer ID Installer' identity for team $TEAM_ID in the keychain."
-  exit 7
 fi
 
 rm -f "$pkg_path" "$component_path"
