@@ -28,7 +28,58 @@ final class FakeFailedAttemptRecorder: FailedAttemptRecording, @unchecked Sendab
     var count: Int { lock.withLock { recordedBundleIDs.count } }
 }
 
+/// Atrapa z promptem „w toku": każde wywołanie czeka, aż test je rozstrzygnie.
+final class PendingAuthenticator: BiometricAuthenticating, @unchecked Sendable {
+    private let lock = NSLock()
+    private var pending: [CheckedContinuation<AuthResult, Never>] = []
+
+    func authenticate(bundleID: String, appName: String, policy: AuthPolicy) async -> AuthResult {
+        await withCheckedContinuation { c in lock.withLock { pending.append(c) } }
+    }
+
+    func authenticate(reason: String, policy: AuthPolicy) async -> AuthResult { .success }
+
+    var count: Int { lock.withLock { pending.count } }
+    func resolve(_ index: Int, with result: AuthResult) { lock.withLock { pending[index] }.resume(returning: result) }
+}
+
 final class AuthFlowTests: XCTestCase {
+
+    func testSupersededPromptIsNotRecordedAsFailure() async {
+        // Prompt zgubił się pod oknami → „Unlock" na zasłonie wywołuje nowy; stary
+        // kończy się `.canceled` (invalidate) i NIE może liczyć się jako nieudana próba.
+        let controller = FakeAppController()
+        let auth = PendingAuthenticator()
+        let recorder = FakeFailedAttemptRecorder()
+        let service = InProcessEnforcementService(controller: controller, authenticator: auth,
+                                                  failedAttemptRecorder: recorder)
+        await service.addProtectedApp(sampleApp())
+        var config = await service.currentState().configuration
+        config.captureFailedAttempts = true
+        await service.updateConfiguration(config)
+        let id = await service.currentState().apps[0].id
+
+        let first = Task { await service.authenticate(appID: id) }
+        while auth.count < 1 { await Task.yield() }
+        let second = Task { await service.authenticate(appID: id) }
+        while auth.count < 2 { await Task.yield() }
+
+        auth.resolve(0, with: .canceled)            // zastąpiony prompt
+        let firstResult = await first.value
+        XCTAssertFalse(firstResult)
+        var s = await service.currentState()
+        XCTAssertEqual(s.apps[0].status, .authenticating)   // nowy prompt nadal trwa
+        XCTAssertEqual(s.pendingAuthAppID, id)
+        XCTAssertEqual(recorder.count, 0)
+        XCTAssertEqual(controller.activatedSelfCount, 0)
+
+        auth.resolve(1, with: .success)
+        let secondResult = await second.value
+        XCTAssertTrue(secondResult)
+        s = await service.currentState()
+        XCTAssertEqual(s.apps[0].status, .unlocked)
+        XCTAssertFalse(s.recentActivity.contains { $0.kind == .authFailed })
+    }
 
     private func sampleApp(fallback: Bool = false, requireTouchID: Bool = true) -> ProtectedApp {
         ProtectedApp(bundleIdentifier: "org.whispersystems.signal-desktop", displayName: "Signal",

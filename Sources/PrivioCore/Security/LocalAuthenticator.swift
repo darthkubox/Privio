@@ -19,6 +19,11 @@ public struct LocalAuthenticator: BiometricAuthenticating {
 
     public func authenticate(bundleID: String, appName: String, policy: AuthPolicy) async -> AuthResult {
         let context = LAContext()
+        // Najwyżej jeden prompt odblokowania apki naraz: nowy (np. przycisk „Unlock"
+        // na zasłonie, gdy poprzedni zgubił się pod oknami) anuluje poprzedni, który
+        // kończy się `.appCancel` → `.canceled`; enforcement ignoruje ten wynik.
+        Self.appUnlockContext.replace(with: context)
+        defer { Self.appUnlockContext.clear(ifCurrent: context) }
         let outcome = await evaluate(context: context, policy: policy,
                                      reason: Self.localizedReason(appName: appName))
         guard outcome == .success else { return outcome }
@@ -110,9 +115,31 @@ public struct LocalAuthenticator: BiometricAuthenticating {
         return "unlock \(appName)"
     }
 
+    /// Kontekst trwającego promptu odblokowania apki (współdzielony przez wszystkie
+    /// instancje - prompt systemowy jest jeden).
+    private static let appUnlockContext = InFlightContext()
+
     private func randomNonce(_ length: Int = 32) -> Data {
         var bytes = [UInt8](repeating: 0, count: length)
         _ = SecRandomCopyBytes(kSecRandomDefault, length, &bytes)
         return Data(bytes)
+    }
+}
+
+/// Bezpieczny wątkowo uchwyt na kontekst trwającego promptu.
+private final class InFlightContext: @unchecked Sendable {
+    private let lock = NSLock()
+    private var context: LAContext?
+
+    func replace(with newContext: LAContext) {
+        let previous = lock.withLock { () -> LAContext? in
+            defer { context = newContext }
+            return context
+        }
+        previous?.invalidate()
+    }
+
+    func clear(ifCurrent finished: LAContext) {
+        lock.withLock { if context === finished { context = nil } }
     }
 }

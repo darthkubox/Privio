@@ -37,6 +37,10 @@ public actor InProcessEnforcementService: EnforcementControlling {
     /// Krótkie okno „cooldown" po anulowaniu - zapobiega pętli anuluj→apka wraca→prompt.
     private var recentlyCancelled: [String: Date] = [:]
     private let cancelCooldown: TimeInterval = 0.8
+    /// Numer bieżącej próby uwierzytelnienia per apka. Nowa próba (np. przycisk
+    /// „Unlock" na zasłonie, gdy prompt zgubił się pod oknami) zastępuje starą;
+    /// wynik zastąpionej próby jest ignorowany - to nie jest porażka użytkownika.
+    private var authAttempts: [UUID: Int] = [:]
     private let maxActivityEntries = 200
 
     /// - Parameters:
@@ -161,7 +165,12 @@ public actor InProcessEnforcementService: EnforcementControlling {
             handleForegroundChange(to: bundleID)   // bezczynność (sekcja 8)
             enforceForeground(bundleID: bundleID)  // ukryj, jeśli zablokowana
         case .launched(let bundleID):
-            enforceForeground(bundleID: bundleID)  // start apki: ukryj, jeśli zablokowana
+            // Start apki NIE oznacza, że użytkownik po nią sięga: macOS uruchamia apki
+            // w tle bez okna i bez aktywacji (np. push do apki Catalyst - WhatsApp przy
+            // każdej nowej wiadomości, `com.apple.das.launchreason.push`). Tu tylko
+            // ukrywamy zablokowaną apkę; o Touch ID/hasło pytamy dopiero na `.activated`,
+            // które start z Docka/Findera/powiadomienia zawsze wysyła.
+            hideIfLocked(bundleID: bundleID)
         case .terminated(let bundleID):
             guard let idx = state.apps.firstIndex(where: { $0.app.bundleIdentifier == bundleID }) else { break }
             cancelTimers(state.apps[idx].id)
@@ -203,8 +212,22 @@ public actor InProcessEnforcementService: EnforcementControlling {
             broadcast()
         case .authenticating:
             // Apka wciąż czeka na auth, a jej okno znów się pojawiło (typowo:
-            // dokończyła uruchamianie po pierwszym ukryciu na .launched) - ukryj
-            // ponownie, bez zmiany stanu.
+            // dokończyła uruchamianie po pierwszym ukryciu) - ukryj ponownie,
+            // bez zmiany stanu.
+            controller?.hide(bundleID: bundleID)
+        case .unlocked, .unprotected:
+            break
+        }
+    }
+
+    /// Ukrywa zablokowaną chronioną apkę BEZ prośby o uwierzytelnienie i bez
+    /// przejmowania fokusu - dla zdarzeń, które nie są aktywacją (start w tle).
+    private func hideIfLocked(bundleID: String) {
+        guard state.protectionActive, state.configuration.appBlockingEnabled,
+              let idx = state.apps.firstIndex(where: { $0.app.bundleIdentifier == bundleID }),
+              state.apps[idx].app.protectionEnabled else { return }
+        switch state.apps[idx].status {
+        case .locked, .authenticating:
             controller?.hide(bundleID: bundleID)
         case .unlocked, .unprotected:
             break
@@ -467,8 +490,14 @@ public actor InProcessEnforcementService: EnforcementControlling {
         } else {
             policy = .biometricsOnly
         }
+        let attempt = (authAttempts[appID] ?? 0) &+ 1
+        authAttempts[appID] = attempt
         let result = await authenticator.authenticate(
             bundleID: app.bundleIdentifier, appName: app.displayName, policy: policy)
+
+        // Zastąpiona nowszą próbą (autentykator anulował jej prompt) - bez wpisu
+        // „authFailed", zdjęcia, cooldownu i przejmowania fokusu; stanem zarządza nowsza.
+        guard authAttempts[appID] == attempt else { return false }
 
         switch result {
         case .success:

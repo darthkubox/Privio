@@ -244,6 +244,7 @@ final class AppModel {
         reconcileLoginItem()
         configurePrivacyModeHotKey()
         updatePrivacyCurtain(with: state)
+        lockCover.onUnlock = { [weak self] bundleID in self?.unlockFromLockCover(bundleID: bundleID) }
         lockCover.update(with: state)
         onProximityConfig?(state.configuration.proximity)
         observationTask = Task { [weak self] in
@@ -362,7 +363,30 @@ final class AppModel {
         // aktywacji czas, by prompt pojawił się z fokusem (palec od razu).
         Task {
             try? await Task.sleep(nanoseconds: 120_000_000)
-            await service.authenticate(appID: pending, preferPassword: false)
+            await runAppAuthentication(appID: pending)
+        }
+    }
+
+    /// Prompt odblokowania apki. Na czas promptu `authInProgress` - zasłony (blokady
+    /// i prywatności) przestają co tick wypychać się na front i nie chowają promptu.
+    private func runAppAuthentication(appID: UUID) async {
+        AppModel.authDepth += 1
+        defer { AppModel.authDepth -= 1 }
+        await service.authenticate(appID: appID, preferPassword: false)
+    }
+
+    /// Przycisk „Unlock" na zasłonie blokady. Gdy prompt już trwa, ale zgubił się pod
+    /// oknami, nowy go zastępuje (stary jest anulowany, bez wpisu o nieudanej próbie).
+    func unlockFromLockCover(bundleID: String) {
+        guard let snapshot = state.apps.first(where: { $0.app.bundleIdentifier == bundleID }) else { return }
+        guard state.pendingAuthAppID == snapshot.id else {
+            requestAuthentication(for: snapshot.app)   // → pendingAuthAppID → syncAuth
+            return
+        }
+        focusAnchor.reactivate()
+        Task {
+            try? await Task.sleep(nanoseconds: 120_000_000)
+            await runAppAuthentication(appID: snapshot.id)
         }
     }
 
@@ -450,11 +474,14 @@ final class AppModel {
     /// TRUE w trakcie systemowego promptu uwierzytelniania. `showMainWindowOnLaunch`
     /// (delegat) sprawdza tę flagę, by NIE aktywować okna Privio w trakcie promptu -
     /// inaczej aktywacja odbierała front UIAgentowi Touch ID i prompt gasł.
-    @MainActor static var authInProgress = false
+    /// Licznik, nie flaga: prompt odblokowania apki może zostać zastąpiony nowym
+    /// (przycisk „Unlock" na zasłonie), a zakończenie starego nie może zgasić flagi.
+    @MainActor private static var authDepth = 0
+    @MainActor static var authInProgress: Bool { authDepth > 0 }
 
     func authorize(_ action: SensitiveAction) async -> Bool {
-        AppModel.authInProgress = true
-        defer { AppModel.authInProgress = false }
+        AppModel.authDepth += 1
+        defer { AppModel.authDepth -= 1 }
         // Bez kotwicy fokusu systemowy prompt Touch ID nie pokazuje się, gdy akcję
         // wyzwolono z paska menu (Privio to accessory bez okna) - dlatego „Zamknij"
         // i „Sprawdź aktualizacje" wisiały. Kotwica jest liczona (bezpieczne zagnieżdżenie).

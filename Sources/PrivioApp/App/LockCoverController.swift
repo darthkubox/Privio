@@ -16,7 +16,8 @@ import PrivioCore
 /// - sterowany STANEM blokady (`LockCoverPolicy`), nie tym, co jest na wierzchu,
 /// - nakładka jest nieprzepuszczalna dla myszy (blokuje interakcję z nieukrytym oknem),
 /// - NIE ma żadnej drogi odsłonięcia (brak hold-reveal / plakietki) - to zabezpieczenie,
-///   które nie może być zdejmowalne przed uwierzytelnieniem.
+///   które nie może być zdejmowalne przed uwierzytelnieniem. Jedyny przycisk („Unlock")
+///   wywołuje systemowy prompt Touch ID/hasła - przydatne, gdy prompt zgubił się pod oknami.
 ///
 /// Geometria okien pochodzi z `WindowGeometry` (tylko pozycja + PID, bez obrazów okien) -
 /// bez uprawnień Screen Recording / Accessibility.
@@ -25,6 +26,8 @@ final class LockCoverController {
     private var bundleIDsToCover: Set<String> = []
     private var windows: [LockCoverWindow] = []
     private var tickTimer: Timer?
+    /// Wywoływane przyciskiem „Unlock" z bundleID zakrytej apki.
+    var onUnlock: ((String) -> Void)?
 
     /// Aktualizuje zasłonę na podstawie migawki stanu enforcement.
     func update(with state: EnforcementState) {
@@ -65,26 +68,31 @@ final class LockCoverController {
         for window in windows { window.orderFrontRegardless() }
     }
 
-    /// Ramki wszystkich widocznych okien apek, które trzeba zakryć (może być wiele apek).
-    private func targetFrames() -> [NSRect] {
+    /// Ramki wszystkich widocznych okien apek, które trzeba zakryć (może być wiele apek),
+    /// razem z bundleID właściciela (dla przycisku „Unlock").
+    private func targetFrames() -> [(bundleID: String, frame: NSRect)] {
         guard !bundleIDsToCover.isEmpty else { return [] }
-        var frames: [NSRect] = []
-        for bundleID in bundleIDsToCover {
+        var targets: [(bundleID: String, frame: NSRect)] = []
+        for bundleID in bundleIDsToCover.sorted() {
             for app in NSRunningApplication.runningApplications(withBundleIdentifier: bundleID) {
-                frames.append(contentsOf: WindowGeometry.windowFrames(pid: app.processIdentifier))
+                targets += WindowGeometry.windowFrames(pid: app.processIdentifier).map { (bundleID, $0) }
             }
         }
-        return frames
+        return targets
     }
 
-    private func reconcile(to frames: [NSRect]) {
-        guard !frames.isEmpty else { teardownWindows(); return }
-        if windows.count != frames.count {
+    private func reconcile(to targets: [(bundleID: String, frame: NSRect)]) {
+        guard !targets.isEmpty else { teardownWindows(); return }
+        if windows.map(\.bundleID) != targets.map(\.bundleID) {
             teardownWindows()
-            windows = frames.map { LockCoverWindow(frame: $0) }
+            windows = targets.map { target in
+                LockCoverWindow(frame: target.frame, bundleID: target.bundleID) { [weak self] in
+                    self?.onUnlock?(target.bundleID)
+                }
+            }
         } else {
-            for (window, frame) in zip(windows, frames) where window.frame != frame {
-                window.setFrame(frame, display: false)
+            for (window, target) in zip(windows, targets) where window.frame != target.frame {
+                window.setFrame(target.frame, display: false)
             }
         }
     }
@@ -99,7 +107,10 @@ final class LockCoverController {
 
 @MainActor
 private final class LockCoverWindow: NSPanel {
-    init(frame: NSRect) {
+    let bundleID: String
+
+    init(frame: NSRect, bundleID: String, onUnlock: @escaping () -> Void) {
+        self.bundleID = bundleID
         super.init(contentRect: frame,
                    styleMask: [.borderless, .nonactivatingPanel],
                    backing: .buffered,
@@ -113,7 +124,7 @@ private final class LockCoverWindow: NSPanel {
         hidesOnDeactivate = false
         level = .screenSaver
         collectionBehavior = [.canJoinAllSpaces, .fullScreenAuxiliary, .stationary, .ignoresCycle]
-        contentView = LockCoverContentView()
+        contentView = LockCoverContentView(onUnlock: onUnlock)
         setFrame(frame, display: false)
     }
 
@@ -127,10 +138,10 @@ private final class LockCoverWindow: NSPanel {
 private final class LockCoverContentView: NSView {
     private let effectView = NSVisualEffectView()
     private let dim = NSView()
-    private let badge: NSHostingView<LockCoverBadge>
+    private let badge: FirstMouseHostingView<LockCoverBadge>
 
-    init() {
-        badge = NSHostingView(rootView: LockCoverBadge())
+    init(onUnlock: @escaping () -> Void) {
+        badge = FirstMouseHostingView(rootView: LockCoverBadge(onUnlock: onUnlock))
         super.init(frame: .zero)
         wantsLayer = true
 
@@ -165,9 +176,18 @@ private final class LockCoverContentView: NSView {
     }
 }
 
-// MARK: - Znak Privio + „Zablokowane"
+/// Panel nakładki nigdy nie staje się kluczowy, więc każde kliknięcie jest „pierwszym" -
+/// bez tego pierwsze kliknięcie w „Unlock" mogłoby zostać połknięte.
+private final class FirstMouseHostingView<Content: View>: NSHostingView<Content> {
+    override func acceptsFirstMouse(for event: NSEvent?) -> Bool { true }
+}
 
-private struct LockCoverBadge: View {
+// MARK: - Znak Privio + „Zablokowane" + „Odblokuj"
+
+/// Wewnętrzne (nie `private`), by snapshot mode mógł je wyrenderować (`lockcover`).
+struct LockCoverBadge: View {
+    let onUnlock: () -> Void
+
     var body: some View {
         VStack(spacing: 14) {
             PrivioLogo(fill: .solid(.white))
@@ -176,9 +196,29 @@ private struct LockCoverBadge: View {
             Text("Locked")
                 .font(.privioSystem(size: 15, weight: .semibold))
                 .foregroundStyle(.white.opacity(0.92))
+            // Ponownie wywołuje systemowy prompt (np. gdy zgubił się pod oknami).
+            Button(action: onUnlock) {
+                Label("Unlock", fa: "touchid")
+                    .font(.privioSystem(size: 13, weight: .semibold))
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 7)
+            }
+            .buttonStyle(LockCoverButtonStyle())
+            .padding(.top, 4)
         }
         .padding(.horizontal, 28)
         .padding(.vertical, 22)
         .accessibilityElement(children: .combine)
+    }
+}
+
+/// Własny styl: panel nakładki nigdy nie jest kluczowy, a `.borderedProminent` w oknie
+/// niekluczowym traci kolor akcentu i wygląda na nieaktywny.
+private struct LockCoverButtonStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(.white)
+            .background(Capsule().fill(Color.privioPrimary.opacity(configuration.isPressed ? 0.75 : 1)))
+            .contentShape(Capsule())
     }
 }

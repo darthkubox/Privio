@@ -35,6 +35,16 @@ final class AuthFocusAnchor {
         panel.makeKeyAndOrderFront(nil)
     }
 
+    /// Ponownie aktywuje już pokazaną kotwicę (bez zmiany licznika) - dla promptu
+    /// wywołanego od nowa w trakcie trwającego uwierzytelnienia.
+    func reactivate() {
+        guard presentCount > 0, let panel else { return }
+        positionAtActiveScreenCenter(panel)
+        NSApp.setActivationPolicy(.regular)
+        NSApp.activate(ignoringOtherApps: true)
+        panel.makeKeyAndOrderFront(nil)
+    }
+
     func dismiss() {
         presentCount = max(0, presentCount - 1)
         guard presentCount == 0 else { return }   // pozostań, dopóki trwa zewnętrzne opakowanie

@@ -5,7 +5,7 @@ import PrivioCore
 /// Tryb podglądu offscreen (bez uprawnień do nagrywania ekranu).
 ///
 /// Uruchomienie aplikacji ze zmienną `PRIVIO_SNAPSHOT=/ścieżka.png` (opcjonalnie
-/// `PRIVIO_SNAPSHOT_SECTION=activity|settings|general|about|auth`,
+/// `PRIVIO_SNAPSHOT_SECTION=activity|settings|general|about|auth|lockcover`,
 /// `PRIVIO_SNAPSHOT_APPEARANCE=dark`) renderuje realny UI do PNG przez
 /// `ImageRenderer` i kończy proces. Służy wyłącznie do weryfikacji podczas
 /// developmentu - w normalnym uruchomieniu nieaktywny.
@@ -174,6 +174,7 @@ final class SnapshotAppDelegate: NSObject, NSApplicationDelegate {
         let dark = env["PRIVIO_SNAPSHOT_APPEARANCE"] == "dark"
         let isLicense = env["PRIVIO_SNAPSHOT_SECTION"] == "license"
         let isMenuBar = env["PRIVIO_SNAPSHOT_SECTION"] == "menubar"
+        let isLockCover = env["PRIVIO_SNAPSHOT_SECTION"] == "lockcover"
         // W podglądzie paska menu udajemy, że wszystkie przykładowe apki są otwarte.
         if isMenuBar {
             model.runningBundleIDsProvider = { Set(model.state.apps.map(\.app.bundleIdentifier)) }
@@ -182,11 +183,19 @@ final class SnapshotAppDelegate: NSObject, NSApplicationDelegate {
         // Optional height override to capture scrollable content in one snapshot (dev only).
         let baseHeight = Double(env["PRIVIO_SNAPSHOT_HEIGHT"] ?? "") ?? (isLicense ? 680 : 660)
         let size: NSSize = isLicense ? NSSize(width: 900, height: baseHeight)
+            : isLockCover ? NSSize(width: 640, height: 400)
             : isMenuBar ? NSSize(width: 300, height: Double(env["PRIVIO_SNAPSHOT_HEIGHT"] ?? "") ?? 720)
             : NSSize(width: 980, height: baseHeight)
         let root: AnyView
         if isLicense {
             root = AnyView(LicenseAgreementView(requireAcceptance: true, startDocumentID: env["PRIVIO_SNAPSHOT_DOC"]))
+        } else if isLockCover {
+            // Plakietka zasłony blokady na ciemnym tle (rozmycia `.behindWindow` nie da
+            // się wyrenderować offscreen - tło zastępuje rozmycie + przyciemnienie).
+            root = AnyView(ZStack {
+                Color(white: 0.12)
+                LockCoverBadge(onUnlock: {})
+            }.frame(width: size.width, height: size.height))
         } else if isMenuBar {
             root = AnyView(MenuBarContent().environment(model).environment(vault).environment(proximity))
         } else {

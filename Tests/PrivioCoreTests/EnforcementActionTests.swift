@@ -39,6 +39,35 @@ final class EnforcementActionTests: XCTestCase {
         XCTAssertEqual(s.pendingAuthAppID, s.apps[0].id)
     }
 
+    func testBackgroundLaunchOfLockedAppHidesWithoutPrompt() async {
+        // macOS uruchamia apkę w tle (np. push WhatsApp) - bez aktywacji.
+        let controller = FakeAppController()
+        let service = InProcessEnforcementService(controller: controller)
+        await service.addProtectedApp(sampleApp())
+
+        await service.handle(.launched(bundleID: "org.whispersystems.signal-desktop"))
+
+        let s = await service.currentState()
+        XCTAssertEqual(controller.hidden, ["org.whispersystems.signal-desktop"])
+        XCTAssertEqual(s.apps[0].status, .locked)
+        XCTAssertNil(s.pendingAuthAppID)                 // brak promptu
+        XCTAssertEqual(controller.activatedSelfCount, 0) // brak kradzieży fokusu
+    }
+
+    func testUserLaunchRequestsAuthOnActivation() async {
+        // Start z Docka: najpierw .launched, potem .activated.
+        let controller = FakeAppController()
+        let service = InProcessEnforcementService(controller: controller)
+        await service.addProtectedApp(sampleApp())
+
+        await service.handle(.launched(bundleID: "org.whispersystems.signal-desktop"))
+        await service.handle(.activated(bundleID: "org.whispersystems.signal-desktop"))
+
+        let s = await service.currentState()
+        XCTAssertEqual(s.apps[0].status, .authenticating)
+        XCTAssertEqual(s.pendingAuthAppID, s.apps[0].id)
+    }
+
     func testActivatingUnlockedAppDoesNothing() async {
         let controller = FakeAppController()
         let service = InProcessEnforcementService(controller: controller)
